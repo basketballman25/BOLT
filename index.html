@@ -492,15 +492,20 @@ const ARTISTS = [
     {t:'Hate The Other Side',f:'ft. Marshmello & The Kid LAROI',y:'GNVMjsHwZ2M'},{t:'Already Dead',y:'5j5YVKX5bF8'}
   ]},
   {name:'Connor Price',emoji:'🎤',color:'#38bdf8',songs:[
-    {t:'Too Easy',y:''},{t:'Upgrade',y:''},{t:'Scoop',y:''},{t:'Violet',y:''},
-    {t:'Trendsetter',y:''},{t:'Spinnin',y:''},{t:'Smoke',y:''},{t:'I Need Help',y:''},
-    {t:'Drop',y:''},{t:'AMG',y:''},{t:'Top 10',y:''},{t:'Overnight',y:''},
-    {t:"Straight A's",y:''},{t:'Slide',y:''},{t:'NOW WHAT?',y:''},
-    {t:'Million Cash',y:''},{t:'Smooth',y:''},{t:'SPLAT',y:''},{t:'Buddy',y:''},
-    {t:'NEW PHONE',y:''},{t:'Not A Beanie',y:''},{t:'DIP',y:''},
-    {t:'Mula',f:'ft. Big Sean',y:''},{t:'GOLDEN GOOSE',y:''},{t:'Luv u',y:''},
-    {t:'Dabble',y:''},{t:'These Days',y:''},{t:'Thrillin',y:''},{t:'John Wick',y:''},
-    {t:'Riptide',y:''},{t:'Still Spinnin',y:''},{t:'Easy',y:''}
+    {t:'Too Easy',y:'xtCCwDfb2-0'},{t:'Upgrade',y:'9XqBWSt3_8w'},{t:'Scoop',y:'aIS1WIgNxTc'},
+    {t:'Violet',y:'your-violet-id'},{t:'Trendsetter',y:'your-trendsetter-id'},
+    {t:'Spinnin',y:'J7IVjCaC4AA'},{t:'Smoke',y:'your-smoke-id'},{t:'I Need Help',y:'your-i-need-help-id'},
+    {t:'Drop',y:'your-drop-id'},{t:'AMG',y:'your-amg-id'},{t:'Top 10',y:'Q-wsVOv390w'},
+    {t:'Overnight',y:'your-overnight-id'},{t:"Straight A's",y:'your-straightas-id'},
+    {t:'Slide',y:'ZulYhwXiG7w'},{t:'NOW WHAT?',y:'your-nowwhat-id'},
+    {t:'Million Cash',y:'your-millioncash-id'},{t:'Smooth',y:'your-smooth-id'},
+    {t:'SPLAT',y:'your-splat-id'},{t:'Buddy',y:'your-buddy-id'},
+    {t:'NEW PHONE',y:'your-newphone-id'},{t:'Not A Beanie',y:'your-notabeanie-id'},
+    {t:'DIP',y:'your-dip-id'},{t:'Mula',f:'ft. Big Sean',y:'Nj0DGMA8rNc'},
+    {t:'GOLDEN GOOSE',y:'your-goldengoose-id'},{t:'Luv u',y:'-nRNFnvhevs'},
+    {t:'Dabble',y:'4Gz_m4G_th8'},{t:'These Days',y:'your-thesedays-id'},
+    {t:'Thrillin',y:'your-thrillin-id'},{t:'John Wick',y:'your-johnwick-id'},
+    {t:'Riptide',y:'your-riptide-id'},{t:'Still Spinnin',y:'CO_NYYKwnbM'},{t:'Easy',y:'your-easy-id'}
   ]},
   {name:'Lil Tecca',emoji:'🧡',color:'#fb923c',songs:[
     {t:'Ransom',y:'jnGpS0ARBGk'},{t:'Repeat It',f:'ft. Gunna',y:'d4qYmMCDRTs'},
@@ -608,11 +613,10 @@ function closePlayer(){
 function renderMusic(){
   const grid = document.getElementById('artist-grid');
   grid.innerHTML = '';
-  const urls = getSongURLs();
-  ARTISTS.forEach((artist,i)=>grid.appendChild(makeArtistCard(artist, i, urls)));
+  ARTISTS.forEach((artist,i)=>grid.appendChild(makeArtistCard(artist, i)));
 }
 
-function makeArtistCard(artist, idx, urls){
+function makeArtistCard(artist, idx){
   const card = document.createElement('div');
   card.className='artist-card';
   card.id='ac-'+idx;
@@ -621,20 +625,21 @@ function makeArtistCard(artist, idx, urls){
   hdr.className = 'artist-header';
   hdr.innerHTML = '<span class="artist-emoji">'+artist.emoji+'</span><span class="artist-name">'+artist.name+'</span><span class="artist-count">'+artist.songs.length+' songs</span><span class="artist-toggle">▼</span>';
   hdr.addEventListener('click', function(){ toggleArtist(idx); });
-  
+
   const list = document.createElement('div');
   list.className = 'song-list';
   list.id = 'sl-'+idx;
-  
+
   artist.songs.forEach(function(s){
-    const key = artist.name+'||'+s.t;
     var item = document.createElement('div');
     item.className = 'song-item';
     item.innerHTML = '<span class="play-icon">▶</span><span class="song-name">'+s.t+'</span>'+(s.f ? '<span class="song-feat">'+s.f+'</span>' : '');
-    (function(songTitle, artistName, ytId){ item.addEventListener('click', function(){ openPlayer(songTitle, artistName, ytId); }); })(s.t, artist.name, s.y || '');
+    (function(songTitle, artistName, ytId){
+      item.addEventListener('click', function(){ openPlayer(songTitle, artistName, ytId); });
+    })(s.t, artist.name, s.y || '');
     list.appendChild(item);
   });
-  
+
   card.appendChild(hdr);
   card.appendChild(list);
   return card;
