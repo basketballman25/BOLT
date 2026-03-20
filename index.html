@@ -580,7 +580,7 @@ function openPlayer(title, artist, ytId) {
     frameWrap.style.display = 'block';
     noteEl.innerHTML = '';
     var frame = document.getElementById('player-iframe');
-    frame.src = 'https://www.youtube-nocookie.com/embed/' + ytId + '?autoplay=1&rel=0';
+    frame.src = 'https://www.youtube.com/embed/' + ytId + '?autoplay=1&rel=0';
   } else {
     // No ytId (Connor Price songs) — search YouTube in new tab
     frameWrap.style.display = 'none';
