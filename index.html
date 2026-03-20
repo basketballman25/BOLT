@@ -518,13 +518,16 @@ const ARTISTS = [
 ];
 
 const DEFAULT_GAMES = [
-  {title:'Chess',emoji:'♟️',url:'https://playpager.com/embed/chess/index.html'},
-  {title:'Checkers',emoji:'🔴',url:'https://playpager.com/embed/checkers/index.html'},
-  {title:'Solitaire',emoji:'🃏',url:'https://playpager.com/embed/solitaire/index.html'},
-  {title:'Sudoku',emoji:'🔢',url:'https://playpager.com/embed/sudoku/index.html'},
-  {title:'Word Puzzle',emoji:'🔤',url:'https://playpager.com/embed/wordpuzzle/index.html'},
-  {title:'Reversi',emoji:'⚫',url:'https://playpager.com/embed/reversi/index.html'},
-  {title:'Falling Cubes',emoji:'🟦',url:'https://playpager.com/embed/cubes/index.html'},
+  {title:'Poly Track',emoji:'🏎️',url:'https://www.crazygames.com/embed/poly-track'},
+  {title:'Time Shooter 2',emoji:'🔫',url:'https://www.crazygames.com/embed/time-shooter-2'},
+  {title:'Time Shooter 3',emoji:'💥',url:'https://www.crazygames.com/embed/time-shooter-3-swat'},
+  {title:'Moto X3M',emoji:'🏍️',url:'https://www.crazygames.com/embed/moto-x3m'},
+  {title:'Drift Boss',emoji:'🚗',url:'https://www.crazygames.com/embed/drift-boss'},
+  {title:'Slope',emoji:'⚽',url:'https://www.crazygames.com/embed/slope'},
+  {title:'1v1.LOL',emoji:'🎯',url:'https://www.crazygames.com/embed/1v1-lol'},
+  {title:'Krunker.io',emoji:'🔥',url:'https://www.crazygames.com/embed/krunker'},
+  {title:'Subway Surfers',emoji:'🛹',url:'https://www.crazygames.com/embed/subway-surfers'},
+  {title:'Smash Karts',emoji:'🏎️',url:'https://www.crazygames.com/embed/smash-karts'},
 ];
 
 // ══════════════════════════════════════════
@@ -540,7 +543,7 @@ const getVids=()=>LS.get('bolt_videos',[]);
 const saveVids=v=>LS.set('bolt_videos',v);
 const getGames=()=>{
   const s=LS.get('bolt_games',null);
-  if(!s||!s.length||(s[0]&&s[0].url&&(s[0].url.includes('miniplay')||s[0].url.includes('krunker')))){LS.set('bolt_games',DEFAULT_GAMES);return DEFAULT_GAMES;}
+  if(!s||!s.length||(s[0]&&s[0].url&&(s[0].url.includes('miniplay')||s[0].url.includes('playpager')))){LS.set('bolt_games',DEFAULT_GAMES);return DEFAULT_GAMES;}
   return s;
 };
 const saveGames=g=>LS.set('bolt_games',g);
