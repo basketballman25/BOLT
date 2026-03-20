@@ -112,7 +112,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(2,2,9,.93);b
 .game-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .3s;}
 .game-card:hover{border-color:var(--green);box-shadow:0 0 20px rgba(57,255,20,.15);}
 .game-thumb{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,rgba(57,255,20,.12),rgba(0,206,209,.08),rgba(191,0,255,.1));display:flex;align-items:center;justify-content:center;font-size:4rem;cursor:pointer;position:relative;overflow:hidden;}
-.game-thumb::after{content:'▶ PLAY';position:absolute;font-family:'Orbitron',monospace;font-size:.7rem;font-weight:700;letter-spacing:3px;background:var(--green);color:#000;padding:.5rem 1.5rem;border-radius:4px;opacity:0;transition:opacity .3s;}
+.game-thumb::after{content:'⛶ FULLSCREEN';position:absolute;font-family:'Orbitron',monospace;font-size:.7rem;font-weight:700;letter-spacing:3px;background:var(--green);color:#000;padding:.5rem 1.5rem;border-radius:4px;opacity:0;transition:opacity .3s;}
 .game-thumb:hover::after{opacity:1;}
 .game-frame-wrap{display:none;width:100%;aspect-ratio:16/9;}
 .game-frame-wrap iframe{width:100%;height:100%;border:none;}
@@ -518,16 +518,18 @@ const ARTISTS = [
 ];
 
 const DEFAULT_GAMES = [
-  {title:'Poly Track',emoji:'🏎️',url:'https://www.crazygames.com/embed/poly-track'},
-  {title:'Time Shooter 2',emoji:'🔫',url:'https://www.crazygames.com/embed/time-shooter-2'},
-  {title:'Time Shooter 3',emoji:'💥',url:'https://www.crazygames.com/embed/time-shooter-3-swat'},
-  {title:'Moto X3M',emoji:'🏍️',url:'https://www.crazygames.com/embed/moto-x3m'},
-  {title:'Drift Boss',emoji:'🚗',url:'https://www.crazygames.com/embed/drift-boss'},
-  {title:'Slope',emoji:'⚽',url:'https://www.crazygames.com/embed/slope'},
-  {title:'1v1.LOL',emoji:'🎯',url:'https://www.crazygames.com/embed/1v1-lol'},
-  {title:'Krunker.io',emoji:'🔥',url:'https://www.crazygames.com/embed/krunker'},
-  {title:'Subway Surfers',emoji:'🛹',url:'https://www.crazygames.com/embed/subway-surfers'},
-  {title:'Smash Karts',emoji:'🏎️',url:'https://www.crazygames.com/embed/smash-karts'},
+  {title:'Time Shooter 2',emoji:'🔫',url:'https://games.crazygames.com/en_US/time-shooter-2/index.html'},
+  {title:'Time Shooter 3',emoji:'💥',url:'https://games.crazygames.com/en_US/time-shooter-3-swat/index.html'},
+  {title:'Smash Karts',emoji:'🏎️',url:'https://games.crazygames.com/en_US/smash-karts/index.html'},
+  {title:'Poly Track',emoji:'🏎️',url:'https://games.crazygames.com/en_US/poly-track/index.html'},
+  {title:'Moto X3M',emoji:'🏍️',url:'https://games.crazygames.com/en_US/moto-x3m/index.html'},
+  {title:'Slope',emoji:'🟢',url:'https://games.crazygames.com/en_US/slope/index.html'},
+  {title:'Drift Boss',emoji:'🚗',url:'https://games.crazygames.com/en_US/drift-boss/index.html'},
+  {title:'Rooftop Snipers',emoji:'🎯',url:'https://games.crazygames.com/en_US/rooftop-snipers/index.html'},
+  {title:'Funny Shooter 2',emoji:'😂',url:'https://games.crazygames.com/en_US/funny-shooter-2/index.html'},
+  {title:'Shell Shockers',emoji:'🥚',url:'https://games.crazygames.com/en_US/shell-shockers/index.html'},
+  {title:'Voxiom.io',emoji:'⛏️',url:'https://games.crazygames.com/en_US/voxiom-io/index.html'},
+  {title:'Krunker.io',emoji:'🔥',url:'https://games.crazygames.com/en_US/krunker/index.html'},
 ];
 
 // ══════════════════════════════════════════
@@ -543,7 +545,7 @@ const getVids=()=>LS.get('bolt_videos',[]);
 const saveVids=v=>LS.set('bolt_videos',v);
 const getGames=()=>{
   const s=LS.get('bolt_games',null);
-  if(!s||!s.length||(s[0]&&s[0].url&&(s[0].url.includes('miniplay')||s[0].url.includes('playpager')))){LS.set('bolt_games',DEFAULT_GAMES);return DEFAULT_GAMES;}
+  if(!s||!s.length||(s[0]&&s[0].url&&(s[0].url.includes('miniplay')||s[0].url.includes('playpager')||s[0].url.includes('crazygames.com/embed')))){LS.set('bolt_games',DEFAULT_GAMES);return DEFAULT_GAMES;}
   return s;
 };
 const saveGames=g=>LS.set('bolt_games',g);
@@ -567,32 +569,80 @@ function showPage(p){
 // ══════════════════════════════════════════
 //  MUSIC PLAYER — HTML5 Audio
 // ══════════════════════════════════════════
-function openPlayer(title, artist, ytId) {
+async function openPlayer(title, artist, ytId) {
   const player = document.getElementById('mini-player');
   const audio = document.getElementById('player-audio');
   const noteEl = document.getElementById('player-note');
   const frameWrap = document.getElementById('player-frame-wrap');
+  const frame = document.getElementById('player-iframe');
 
   document.getElementById('player-song').textContent = title;
   document.getElementById('player-artist').textContent = artist;
   document.querySelectorAll('.song-item').forEach(s=>s.classList.remove('playing'));
 
+  audio.style.display = 'none';
+  frameWrap.style.display = 'block';
+  noteEl.innerHTML = '⏳ Loading...';
+  frame.src = '';
+  player.style.display = 'block';
+
+  setTimeout(function(){
+    var h = player.offsetHeight;
+    document.querySelectorAll('.page').forEach(function(p){ p.style.paddingTop = (64+h) + 'px'; });
+  }, 80);
+
+  try {
+    const q = encodeURIComponent(artist + ' ' + title + ' lyrics');
+    const res = await fetch('/api/youtube?q=' + q);
+    if (res.ok) {
+      const data = await res.json();
+      const ids = [data.videoId, ...(data.alternatives || [])].filter(Boolean);
+      if (ids.length > 0) {
+        // Try each video ID until one works
+        frame.src = 'https://www.youtube.com/embed/' + ids[0] + '?autoplay=1&rel=0';
+        noteEl.innerHTML = '';
+        // If first fails, iframe onerror tries next
+        frame.onerror = function() {
+          if (ids[1]) frame.src = 'https://www.youtube.com/embed/' + ids[1] + '?autoplay=1&rel=0';
+        };
+        return;
+      }
+    }
+  } catch(e) {}
+
+  // Fallback to hardcoded ytId
   if (ytId) {
-    // Embed directly using the hardcoded YouTube ID — exactly like your other site!
-    audio.style.display = 'none';
-    frameWrap.style.display = 'block';
-    noteEl.innerHTML = '';
-    var frame = document.getElementById('player-iframe');
     frame.src = 'https://www.youtube.com/embed/' + ytId + '?autoplay=1&rel=0';
+    noteEl.innerHTML = '';
   } else {
-    // No ytId (Connor Price songs) — search YouTube in new tab
     frameWrap.style.display = 'none';
-    audio.style.display = 'none';
     var q = encodeURIComponent(artist + ' ' + title + ' official audio');
     window.open('https://www.youtube.com/results?search_query=' + q, '_blank');
-    noteEl.innerHTML = '🎵 Searching YouTube for this song...';
+    noteEl.innerHTML = '🎵 Opened YouTube search for this song.';
+  }
+}
+
+function openPlayerURL(title, artist, url) {
+  const player = document.getElementById('mini-player');
+  const frameWrap = document.getElementById('player-frame-wrap');
+  const frame = document.getElementById('player-iframe');
+  const noteEl = document.getElementById('player-note');
+
+  document.getElementById('player-song').textContent = title;
+  document.getElementById('player-artist').textContent = artist;
+
+  let src = url;
+  if (url.includes('youtube.com/watch')) {
+    try { const v = new URL(url).searchParams.get('v'); src = 'https://www.youtube.com/embed/' + v + '?autoplay=1'; } catch(e) {}
+  } else if (url.includes('youtu.be/')) {
+    src = 'https://www.youtube.com/embed/' + url.split('youtu.be/')[1].split('?')[0] + '?autoplay=1';
+  } else if (url.includes('soundcloud.com')) {
+    src = 'https://w.soundcloud.com/player/?url=' + encodeURIComponent(url) + '&auto_play=true';
   }
 
+  frameWrap.style.display = 'block';
+  frame.src = src;
+  noteEl.innerHTML = '';
   player.style.display = 'block';
   setTimeout(function(){
     var h = player.offsetHeight;
@@ -616,7 +666,39 @@ function closePlayer(){
 function renderMusic(){
   const grid = document.getElementById('artist-grid');
   grid.innerHTML = '';
-  ARTISTS.forEach((artist,i)=>grid.appendChild(makeArtistCard(artist, i)));
+  const extraSongs = LS.get('bolt_other_songs', []);
+  
+  // Merge admin-added songs into correct artist
+  const mergedArtists = ARTISTS.map(artist => {
+    const added = extraSongs.filter(s => 
+      s.artist.toLowerCase() === artist.name.toLowerCase()
+    );
+    if (!added.length) return artist;
+    return {
+      ...artist,
+      songs: [
+        ...artist.songs,
+        ...added.map(s => ({ t: s.title, f: '', y: '', _url: s.url }))
+      ]
+    };
+  });
+
+  // Songs that don't match any artist go to "Other"
+  const otherSongs = extraSongs.filter(s => 
+    !ARTISTS.find(a => a.name.toLowerCase() === s.artist.toLowerCase())
+  );
+
+  mergedArtists.forEach((artist, i) => grid.appendChild(makeArtistCard(artist, i)));
+
+  if (otherSongs.length) {
+    const otherArtist = {
+      name: 'Other',
+      emoji: '🎵',
+      color: '#ffffff',
+      songs: otherSongs.map(s => ({ t: s.title, f: s.artist, y: '', _url: s.url }))
+    };
+    grid.appendChild(makeArtistCard(otherArtist, 'other'));
+  }
 }
 
 function makeArtistCard(artist, idx){
@@ -637,9 +719,12 @@ function makeArtistCard(artist, idx){
     var item = document.createElement('div');
     item.className = 'song-item';
     item.innerHTML = '<span class="play-icon">▶</span><span class="song-name">'+s.t+'</span>'+(s.f ? '<span class="song-feat">'+s.f+'</span>' : '');
-    (function(songTitle, artistName, ytId){
-      item.addEventListener('click', function(){ openPlayer(songTitle, artistName, ytId); });
-    })(s.t, artist.name, s.y || '');
+    (function(songTitle, artistName, ytId, directUrl){
+      item.addEventListener('click', function(){ 
+        if (directUrl) openPlayerURL(songTitle, artistName, directUrl);
+        else openPlayer(songTitle, artistName, ytId); 
+      });
+    })(s.t, artist.name, s.y || '', s._url || '');
     list.appendChild(item);
   });
 
@@ -677,12 +762,10 @@ function renderGames(){
   const grid=document.getElementById('games-grid'); const games=getGames();
   if(!games.length){grid.innerHTML='<p class="empty-msg">No games yet.</p>';return;}
   grid.innerHTML=games.map((g,i)=>`<div class="game-card">
-    <div class="game-thumb" onclick="toggleGame(${i})"><span>${g.emoji||'🎮'}</span></div>
-    <div class="game-frame-wrap" id="gf-${i}"><iframe src="" data-src="${g.url}" allowfullscreen scrolling="no" style="border:none;"></iframe></div>
+    <div class="game-thumb" onclick="openFS(${i})"><span>${g.emoji||'🎮'}</span></div>
     <div class="game-info"><span class="game-title">${g.title}</span>
       <div class="game-actions">
-        <button class="btn btn-green btn-sm" onclick="toggleGame(${i})">▶ PLAY</button>
-        <button class="btn btn-primary btn-sm" onclick="openFS(${i})">⛶ FULL</button>
+        <button class="btn btn-green btn-sm" onclick="openFS(${i})">▶ PLAY</button>
       </div>
     </div>
   </div>`).join('');
@@ -778,10 +861,54 @@ function renderReqs(){
       <div class="req-user">⚡ ${r.name} <span class="badge ${bc}">${r.type.toUpperCase()}</span></div>
       <div class="req-text">${r.details}</div>
       <div class="req-time">🕐 ${r.time}</div>
-    </div><button class="btn btn-danger" onclick="delReq(${ri})">🗑 DELETE</button></div>`;
+    </div>
+    <div style="display:flex;flex-direction:column;gap:.5rem;">
+      <button class="btn btn-green" style="font-size:.55rem;padding:.4rem .8rem;" onclick="approveReq(${ri})">✅ APPROVE</button>
+      <button class="btn btn-danger" onclick="delReq(${ri})">🗑 DELETE</button>
+    </div></div>`;
   }).join('');
 }
 function delReq(i){const r=getReqs();r.splice(i,1);saveReqs(r);renderDash();showToast('Deleted');}
+
+function approveReq(i){
+  const all = getReqs();
+  const r = all[i];
+  if (!r) return;
+
+  if (r.type === 'song') {
+    // Parse details to get artist and song name
+    // Expected format: "Artist - Song" or just details text
+    const details = r.details;
+    const dashIdx = details.indexOf(' - ');
+    let artist = '', song = '';
+    if (dashIdx > -1) {
+      artist = details.substring(0, dashIdx).trim();
+      song = details.substring(dashIdx + 3).trim();
+    } else {
+      artist = 'Other';
+      song = details;
+    }
+    const others = LS.get('bolt_other_songs', []);
+    others.push({ title: song, artist: artist, url: '' });
+    LS.set('bolt_other_songs', others);
+    showToast('✅ "' + song + '" added to music!');
+  } else if (r.type === 'video') {
+    const vids = getVids();
+    vids.push({ title: r.details, url: '', thumb: '' });
+    saveVids(vids);
+    showToast('✅ Video request approved!');
+  } else if (r.type === 'game') {
+    const games = getGames();
+    games.push({ title: r.details, url: '', emoji: '🎮' });
+    saveGames(games);
+    showToast('✅ Game request approved!');
+  }
+
+  // Delete request after approving
+  all.splice(i, 1);
+  saveReqs(all);
+  renderDash();
+}
 
 function adminAddSong(){
   const artist=document.getElementById('add-artist').value.trim();
