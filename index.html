@@ -14,7 +14,7 @@ body{background:var(--bg);color:var(--white);font-family:'Rajdhani',sans-serif;m
 @keyframes boltGlow{0%,100%{filter:drop-shadow(0 0 10px #00CED1) drop-shadow(0 0 22px #00CED1)}50%{filter:drop-shadow(0 0 28px #00CED1) drop-shadow(0 0 55px #0ff)}}
 @keyframes fadeIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
-
+ 
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(2,2,9,.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,206,209,.2);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;}
 .nav-logo{display:flex;align-items:center;gap:.5rem;cursor:pointer;}
@@ -23,7 +23,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(2,2,9,.93);b
 .nav-links{display:flex;gap:1.8rem;list-style:none;}
 .nav-links a{font-family:'Orbitron',monospace;font-size:.62rem;font-weight:600;letter-spacing:3px;text-decoration:none;color:rgba(255,255,255,.85);transition:all .3s;cursor:pointer;padding:6px 0;border-bottom:2px solid transparent;}
 .nav-links a:hover,.nav-links a.active{color:var(--teal);border-bottom-color:#00ffff;text-shadow:0 0 15px #00CED1, 0 0 3px #fff;}
-
+ 
 /* ── MINI PLAYER ── */
 #mini-player{position:fixed;top:64px;left:0;right:0;z-index:190;background:rgba(5,2,18,.97);border-bottom:2px solid var(--purple);box-shadow:0 4px 40px rgba(191,0,255,.4);display:none;animation:slideDown .3s ease;}
 .player-inner{display:flex;align-items:center;gap:1.5rem;padding:1rem 2rem;}
@@ -35,23 +35,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(2,2,9,.93);b
 .player-note{font-size:.7rem;color:rgba(255,255,255,.2);margin-top:.4rem;font-style:italic;}
 .player-close{background:none;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.4);cursor:pointer;border-radius:6px;padding:.5rem 1rem;font-family:'Orbitron',monospace;font-size:.6rem;letter-spacing:2px;transition:all .2s;flex-shrink:0;}
 .player-close:hover{color:var(--pink);border-color:var(--pink);}
-
+ 
 /* ── PAGES ── */
 .page{display:none;min-height:100vh;padding-top:64px;position:relative;z-index:1;}
 .page.active{display:block;animation:fadeIn .4s ease;}
 .page-content{padding:2rem;max-width:1300px;margin:0 auto;}
-
+ 
 /* ── HERO ── */
 .hero{text-align:center;padding:5rem 2rem 3rem;}
 .hero-logo{display:inline-flex;align-items:center;gap:1rem;margin-bottom:1rem;}
 .hero-title{font-family:'Orbitron',monospace;font-size:clamp(3rem,10vw,7rem);font-weight:900;letter-spacing:16px;animation:rainbow 4s linear infinite;}
 .hero-sub{font-size:1.1rem;color:rgba(255,255,255,.7);letter-spacing:5px;text-transform:uppercase;margin-top:.75rem;}
-
+ 
 /* ── SECTION TITLE ── */
 .section-title{font-family:'Orbitron',monospace;font-size:1rem;font-weight:700;letter-spacing:4px;color:#00ffff;text-shadow:0 0 15px #00CED1, 0 0 3px #fff;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
 .section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--teal),transparent);}
 .mt2{margin-top:2.5rem;}
-
+ 
 /* ── FORMS ── */
 .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;}
 .form-row{margin-bottom:1rem;}
@@ -70,7 +70,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(2,2,9,.93);b
 .btn-danger:hover{background:rgba(255,50,50,.35);}
 .btn-sm{padding:.5rem 1rem;font-size:.55rem;}
 .mt1{margin-top:1rem;}
-
+ 
 /* ── MUSIC ── */
 .artist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;}
 .artist-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .3s;}
@@ -93,7 +93,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(2,2,9,.93);b
 .song-name{font-size:.9rem;color:rgba(255,255,255,.85);flex:1;}
 .song-feat{font-size:.68rem;color:rgba(255,255,255,.3);}
 .no-url-badge{font-size:.55rem;color:rgba(255,255,255,.2);font-style:italic;margin-left:.5rem;}
-
+ 
 /* ── VIDEOS ── */
 .video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;}
 .video-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .3s;}
@@ -106,7 +106,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(2,2,9,.93);b
 .video-info{padding:.9rem 1.1rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem;}
 .video-title{font-family:'Orbitron',monospace;font-size:.68rem;letter-spacing:2px;flex:1;}
 .empty-msg{color:rgba(255,255,255,.3);font-style:italic;font-size:.95rem;padding:1rem 0;}
-
+ 
 /* ── GAMES ── */
 .games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;}
 .game-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .3s;}
@@ -120,18 +120,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(2,2,9,.93);b
 .game-info{padding:.9rem 1.1rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem;}
 .game-title{font-family:'Orbitron',monospace;font-size:.72rem;letter-spacing:2px;color:var(--green);text-shadow:0 0 8px var(--green);}
 .game-actions{display:flex;gap:.5rem;}
-
+ 
 /* ── FULLSCREEN GAME ── */
 #game-fs{display:none;position:fixed;inset:0;z-index:9999;background:#000;flex-direction:column;}
 #game-fs.open{display:flex;}
 #game-fs iframe{flex:1;width:100%;border:none;}
 .fs-bar{background:rgba(2,2,9,.95);border-bottom:1px solid var(--green);padding:.5rem 1.5rem;display:flex;align-items:center;justify-content:space-between;}
 .fs-title{font-family:'Orbitron',monospace;font-size:.7rem;letter-spacing:3px;color:var(--green);}
-
+ 
 /* ── ADMIN LOCK ── */
 #admin-lock{position:fixed;bottom:1.5rem;right:1.5rem;z-index:500;width:44px;height:44px;background:rgba(2,2,9,.8);border:1px solid rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;opacity:.18;transition:all .3s;}
 #admin-lock:hover{opacity:1;border-color:var(--purple);box-shadow:0 0 18px rgba(191,0,255,.5);}
-
+ 
 /* ── ADMIN OVERLAY ── */
 #admin-overlay{display:none;position:fixed;inset:0;z-index:9000;background:rgba(2,2,9,.97);overflow-y:auto;}
 #admin-overlay.open{display:block;}
@@ -174,1122 +174,1129 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(2,2,9,.93);b
 .manage-sub{font-size:.72rem;color:rgba(255,255,255,.3);margin-top:2px;word-break:break-all;}
 .info-box{background:rgba(0,206,209,.05);border:1px solid rgba(0,206,209,.2);border-radius:8px;padding:1rem 1.2rem;margin-bottom:1.2rem;font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.6;}
 .info-box strong{color:var(--teal);}
-
+ 
 /* ── TOAST ── */
 #toast{position:fixed;bottom:2rem;right:5rem;z-index:99999;background:rgba(0,206,209,.12);border:1px solid var(--teal);border-radius:8px;padding:.9rem 1.5rem;font-family:'Orbitron',monospace;font-size:.62rem;letter-spacing:2px;color:var(--teal);box-shadow:0 0 25px rgba(0,206,209,.3);opacity:0;transform:translateY(20px);transition:all .4s;pointer-events:none;}
 #toast.show{opacity:1;transform:translateY(0);}
 ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--bg);}::-webkit-scrollbar-thumb{background:var(--purple);border-radius:3px;}
 @media(max-width:768px){.nav-links{gap:.8rem;}.nav-links a{font-size:.5rem;}.bolt-text{font-size:1.4rem;letter-spacing:4px;}.artist-grid,.video-grid,.games-grid{grid-template-columns:1fr;}.form-grid{grid-template-columns:1fr;}.player-inner{flex-wrap:wrap;}}
-
+ 
 /* ── BANNER ── */
 #site-banner{
-  position:relative;z-index:199;
-  display:none;
-  padding:1rem 3rem;
-  text-align:center;
-  font-family:'Orbitron',monospace;
-  font-size:1rem;
-  font-weight:700;
-  letter-spacing:3px;
-  margin-top:64px;
-  text-shadow:0 0 10px rgba(0,0,0,.4);
+ position:relative;z-index:199;
+ display:none;
+ padding:1rem 3rem;
+ text-align:center;
+ font-family:'Orbitron',monospace;
+ font-size:1rem;
+ font-weight:700;
+ letter-spacing:3px;
+ margin-top:64px;
+ text-shadow:0 0 10px rgba(0,0,0,.4);
 }
 #site-banner.visible{display:block;}
 #banner-close{
-  position:absolute;right:1rem;top:50%;transform:translateY(-50%);
-  background:none;border:none;cursor:pointer;
-  color:inherit;opacity:.6;font-size:1rem;
+ position:absolute;right:1rem;top:50%;transform:translateY(-50%);
+ background:none;border:none;cursor:pointer;
+ color:inherit;opacity:.6;font-size:1rem;
 }
 #banner-close:hover{opacity:1;}
 </style>
 </head>
 <body>
 <canvas id="bg-canvas"></canvas>
-
+ 
 <!-- ══ NAV ══ -->
 <nav>
-  <div class="nav-logo" onclick="showPage('home')">
-    <svg class="bolt-svg" viewBox="0 0 24 24" width="38" height="38" fill="#00CED1"><polygon points="13,2 4,14 11,14 11,22 20,10 13,10"/></svg>
-    <span class="bolt-text">BOLT</span>
-  </div>
-  <ul class="nav-links">
-    <li><a onclick="showPage('home')" id="nav-home" class="active">HOME</a></li>
-    <li><a onclick="showPage('music')" id="nav-music">MUSIC</a></li>
-    <li><a onclick="showPage('videos')" id="nav-videos">VIDEOS</a></li>
-    <li><a onclick="showPage('games')" id="nav-games">GAMES</a></li>
-  </ul>
+ <div class="nav-logo" onclick="showPage('home')">
+   <svg class="bolt-svg" viewBox="0 0 24 24" width="38" height="38" fill="#00CED1"><polygon points="13,2 4,14 11,14 11,22 20,10 13,10"/></svg>
+   <span class="bolt-text">BOLT</span>
+ </div>
+ <ul class="nav-links">
+   <li><a onclick="showPage('home')" id="nav-home" class="active">HOME</a></li>
+   <li><a onclick="showPage('music')" id="nav-music">MUSIC</a></li>
+   <li><a onclick="showPage('videos')" id="nav-videos">VIDEOS</a></li>
+   <li><a onclick="showPage('games')" id="nav-games">GAMES</a></li>
+ </ul>
 </nav>
-
+ 
 <!-- ══ BANNER ══ -->
 <div id="site-banner">
-  <span id="banner-text"></span>
-  <button id="banner-close" onclick="closeBanner()">✕</button>
+ <span id="banner-text"></span>
+ <button id="banner-close" onclick="closeBanner()">✕</button>
 </div>
-
+ 
 <!-- ══ MINI PLAYER (HTML5 Audio) ══ -->
 <div id="mini-player">
-  <div class="player-inner">
-    <div id="player-frame-wrap" style="width:460px;height:130px;flex-shrink:0;border-radius:8px;overflow:hidden;border:1px solid rgba(191,0,255,0.4);background:#000;display:none;">
-      <iframe id="player-iframe" width="100%" height="100%" style="border:none;" allow="autoplay;encrypted-media" allowfullscreen></iframe>
-    </div>
-    <div class="player-info">
-      <div class="player-song" id="player-song">—</div>
-      <div class="player-artist" id="player-artist">—</div>
-      <audio id="player-audio" controls style="display:none;width:100%;"></audio>
-      <div class="player-note" id="player-note"></div>
-    </div>
-    <button class="player-close" onclick="closePlayer()">✕ CLOSE</button>
-  </div>
+ <div class="player-inner">
+   <div id="player-frame-wrap" style="width:460px;height:130px;flex-shrink:0;border-radius:8px;overflow:hidden;border:1px solid rgba(191,0,255,0.4);background:#000;display:none;">
+     <iframe id="player-iframe" width="100%" height="100%" style="border:none;" allow="autoplay;encrypted-media" allowfullscreen></iframe>
+   </div>
+   <div class="player-info">
+     <div class="player-song" id="player-song">—</div>
+     <div class="player-artist" id="player-artist">—</div>
+     <audio id="player-audio" controls style="display:none;width:100%;"></audio>
+     <div class="player-note" id="player-note"></div>
+   </div>
+   <button class="player-close" onclick="closePlayer()">✕ CLOSE</button>
+ </div>
 </div>
-
+ 
 <!-- ══ HOME ══ -->
 <div class="page active" id="page-home">
-  <div class="hero">
-    <div class="hero-logo">
-      <svg class="bolt-svg" viewBox="0 0 24 24" width="90" height="90" fill="#00CED1"><polygon points="13,2 4,14 11,14 11,22 20,10 13,10"/></svg>
-      <span class="hero-title">BOLT</span>
-    </div>
-    <div class="hero-sub">Music · Videos · Games · All in one place</div>
-  </div>
-  <div class="page-content">
-    <div class="section-title">Quick Links</div>
-    <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:3rem;justify-content:center;">
-      <button onclick="window.open('https://kleki.com/','_blank')" style="background:rgba(0,206,209,0.1);border:2px solid var(--teal);border-radius:8px;padding:.7rem 2rem;color:#ffffff;font-family:'Orbitron',monospace;font-size:.7rem;font-weight:700;letter-spacing:3px;cursor:pointer;transition:all .3s;" onmouseover="this.style.background='rgba(0,206,209,0.25)';this.style.boxShadow='0 0 20px rgba(0,206,209,0.5)';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(0,206,209,0.1)';this.style.boxShadow='none';this.style.transform='translateY(0)'">KLEKI</button>
-      <button onclick="window.open('https://sites.google.com/students.srvusd.net/history-net/home?authuser=0','_blank')" style="background:rgba(0,206,209,0.1);border:2px solid var(--teal);border-radius:8px;padding:.7rem 2rem;color:#ffffff;font-family:'Orbitron',monospace;font-size:.7rem;font-weight:700;letter-spacing:3px;cursor:pointer;transition:all .3s;" onmouseover="this.style.background='rgba(0,206,209,0.25)';this.style.boxShadow='0 0 20px rgba(0,206,209,0.5)';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(0,206,209,0.1)';this.style.boxShadow='none';this.style.transform='translateY(0)'">HISTORY.NET</button>
-      <button onclick="window.open('https://sites.google.com/students.srvusd.net/9el2phywqbvfjt7ucmzaxsdr5og8n/home?authuser=0','_blank')" style="background:rgba(0,206,209,0.1);border:2px solid var(--teal);border-radius:8px;padding:.7rem 2rem;color:#ffffff;font-family:'Orbitron',monospace;font-size:.7rem;font-weight:700;letter-spacing:3px;cursor:pointer;transition:all .3s;" onmouseover="this.style.background='rgba(0,206,209,0.25)';this.style.boxShadow='0 0 20px rgba(0,206,209,0.5)';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(0,206,209,0.1)';this.style.boxShadow='none';this.style.transform='translateY(0)'">ALL OF THEM</button>
-    </div>
-    <div class="section-title mt2">Make a Request</div>
-    <div class="card" style="max-width:580px;">
-      <div class="form-row"><label>Your Name</label><input type="text" id="req-name" placeholder="Enter your name"></div>
-      <div class="form-row"><label>Request Type</label>
-        <select id="req-type"><option value="song">🎵 Song</option><option value="video">🎬 Video</option><option value="game">🎮 Game</option></select>
-      </div>
-      <div class="form-row"><label>Details</label><textarea id="req-details" rows="3" placeholder="Song name & artist, video title, game name..."></textarea></div>
-      <button class="btn btn-primary" onclick="submitRequest()">⚡ SEND REQUEST</button>
-    </div>
-  </div>
+ <div class="hero">
+   <div class="hero-logo">
+     <svg class="bolt-svg" viewBox="0 0 24 24" width="90" height="90" fill="#00CED1"><polygon points="13,2 4,14 11,14 11,22 20,10 13,10"/></svg>
+     <span class="hero-title">BOLT</span>
+   </div>
+   <div class="hero-sub">Music · Videos · Games · All in one place</div>
+ </div>
+ <div class="page-content">
+   <div class="section-title">Quick Links</div>
+   <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:3rem;justify-content:center;">
+     <button onclick="window.open('https://kleki.com/','_blank')" style="background:rgba(0,206,209,0.1);border:2px solid var(--teal);border-radius:8px;padding:.7rem 2rem;color:#ffffff;font-family:'Orbitron',monospace;font-size:.7rem;font-weight:700;letter-spacing:3px;cursor:pointer;transition:all .3s;" onmouseover="this.style.background='rgba(0,206,209,0.25)';this.style.boxShadow='0 0 20px rgba(0,206,209,0.5)';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(0,206,209,0.1)';this.style.boxShadow='none';this.style.transform='translateY(0)'">KLEKI</button>
+     <button onclick="window.open('https://sites.google.com/students.srvusd.net/history-net/home?authuser=0','_blank')" style="background:rgba(0,206,209,0.1);border:2px solid var(--teal);border-radius:8px;padding:.7rem 2rem;color:#ffffff;font-family:'Orbitron',monospace;font-size:.7rem;font-weight:700;letter-spacing:3px;cursor:pointer;transition:all .3s;" onmouseover="this.style.background='rgba(0,206,209,0.25)';this.style.boxShadow='0 0 20px rgba(0,206,209,0.5)';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(0,206,209,0.1)';this.style.boxShadow='none';this.style.transform='translateY(0)'">HISTORY.NET</button>
+     <button onclick="window.open('https://sites.google.com/students.srvusd.net/9el2phywqbvfjt7ucmzaxsdr5og8n/home?authuser=0','_blank')" style="background:rgba(0,206,209,0.1);border:2px solid var(--teal);border-radius:8px;padding:.7rem 2rem;color:#ffffff;font-family:'Orbitron',monospace;font-size:.7rem;font-weight:700;letter-spacing:3px;cursor:pointer;transition:all .3s;" onmouseover="this.style.background='rgba(0,206,209,0.25)';this.style.boxShadow='0 0 20px rgba(0,206,209,0.5)';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(0,206,209,0.1)';this.style.boxShadow='none';this.style.transform='translateY(0)'">ALL OF THEM</button>
+   </div>
+   <div class="section-title mt2">Make a Request</div>
+   <div class="card" style="max-width:580px;">
+     <div class="form-row"><label>Your Name</label><input type="text" id="req-name" placeholder="Enter your name"></div>
+     <div class="form-row"><label>Request Type</label>
+       <select id="req-type"><option value="song">🎵 Song</option><option value="video">🎬 Video</option><option value="game">🎮 Game</option></select>
+     </div>
+     <div class="form-row"><label>Details</label><textarea id="req-details" rows="3" placeholder="Song name & artist, video title, game name..."></textarea></div>
+     <button class="btn btn-primary" onclick="submitRequest()">⚡ SEND REQUEST</button>
+   </div>
+ </div>
 </div>
-
+ 
 <!-- ══ MUSIC ══ -->
 <div class="page" id="page-music">
-  <div class="page-content"><div class="section-title mt2">Artists</div><div class="artist-grid" id="artist-grid"></div></div>
+ <div class="page-content"><div class="section-title mt2">Artists</div><div class="artist-grid" id="artist-grid"></div></div>
 </div>
-
+ 
 <!-- ══ VIDEOS ══ -->
 <div class="page" id="page-videos">
-  <div class="page-content"><div class="section-title mt2">Videos</div><div class="video-grid" id="video-grid"></div></div>
+ <div class="page-content"><div class="section-title mt2">Videos</div><div class="video-grid" id="video-grid"></div></div>
 </div>
-
+ 
 <!-- ══ GAMES ══ -->
 <div class="page" id="page-games">
-  <div class="page-content"><div class="section-title mt2">Games</div><div class="games-grid" id="games-grid"></div></div>
+ <div class="page-content"><div class="section-title mt2">Games</div><div class="games-grid" id="games-grid"></div></div>
 </div>
-
+ 
 <!-- ══ FULLSCREEN GAME ══ -->
 <div id="game-fs">
-  <div class="fs-bar"><span class="fs-title" id="fs-title">⚡ BOLT GAMES</span><button class="btn btn-danger" onclick="closeFS()">✕ EXIT</button></div>
-  <iframe id="fs-iframe" allowfullscreen></iframe>
+ <div class="fs-bar"><span class="fs-title" id="fs-title">⚡ BOLT GAMES</span><button class="btn btn-danger" onclick="closeFS()">✕ EXIT</button></div>
+ <iframe id="fs-iframe" allowfullscreen></iframe>
 </div>
-
+ 
 <!-- ══ ADMIN LOCK BUTTON ══ -->
 <div id="admin-lock" onclick="openAdmin()">🔐</div>
-
+ 
 <!-- ══ ADMIN OVERLAY ══ -->
 <div id="admin-overlay">
-  <!-- LOGIN -->
-  <div id="admin-login-wrap">
-    <div class="login-box">
-      <div class="login-icon">🔐</div>
-      <div class="login-title">ADMIN ACCESS</div>
-      <div class="login-sub">BOLT CONTROL PANEL</div>
-      <div class="form-row"><label>Password</label><input type="password" id="admin-pw" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()"></div>
-      <button class="btn btn-pink mt1" onclick="doLogin()">⚡ ENTER</button>
-      <div style="margin-top:1rem;"><button class="btn btn-danger" onclick="closeAdmin()">← BACK TO SITE</button></div>
-      <div class="login-error" id="login-error">⚠ INCORRECT PASSWORD</div>
-    </div>
-  </div>
-  <!-- DASHBOARD -->
-  <div id="admin-dash">
-    <div class="admin-hdr">
-      <div class="admin-title">⚡ ADMIN DASHBOARD</div>
-      <div class="admin-btns"><button class="btn btn-danger" onclick="doLogout()">LOGOUT</button><button class="btn btn-primary" onclick="closeAdmin()">← BACK</button></div>
-    </div>
-    <div class="stats-bar" id="stats-bar"></div>
-    <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('requests')" id="tab-requests">📥 REQUESTS</button>
-      <button class="tab-btn" onclick="switchTab('add-music')" id="tab-add-music">🎵 ADD MUSIC</button>
-      <button class="tab-btn" onclick="switchTab('add-video')" id="tab-add-video">🎬 ADD VIDEO</button>
-      <button class="tab-btn" onclick="switchTab('add-game')" id="tab-add-game">🎮 ADD GAME</button>
-      <button class="tab-btn" onclick="switchTab('manage')" id="tab-manage">⚙ MANAGE</button>
-      <button class="tab-btn" onclick="switchTab('banner')" id="tab-banner">📢 BANNER</button>
-    </div>
-    <!-- REQUESTS -->
-    <div class="panel active" id="panel-requests">
-      <div class="req-filters">
-        <button class="req-filter active" onclick="switchRF('all')" id="rf-all">ALL</button>
-        <button class="req-filter" onclick="switchRF('song')" id="rf-song">🎵 SONGS</button>
-        <button class="req-filter" onclick="switchRF('video')" id="rf-video">🎬 VIDEOS</button>
-        <button class="req-filter" onclick="switchRF('game')" id="rf-game">🎮 GAMES</button>
-      </div>
-      <div class="req-list" id="req-list"></div>
-    </div>
-    <!-- ADD MUSIC -->
-    <div class="panel" id="panel-add-music">
-      <div class="add-form">
-        <div class="add-form-title" style="color:var(--teal)">🎵 Add a Song</div>
-        <div class="info-box">
-          <strong>How to get song links that work:</strong><br>
-          • <strong>Dropbox:</strong> Upload MP3 → Share → copy link → change <code>dl=0</code> to <code>raw=1</code><br>
-          • <strong>Google Drive:</strong> Upload MP3 → Share (anyone with link) → copy file ID → use: <code>https://drive.google.com/uc?export=download&id=FILE_ID</code><br>
-          • <strong>Direct MP3 URL:</strong> Any direct link ending in .mp3 works
-        </div>
-        <div class="form-grid">
-          <div class="form-row"><label>Artist Name</label><input type="text" id="add-artist" placeholder="e.g. Drake"></div>
-          <div class="form-row"><label>Song Name</label><input type="text" id="add-song-name" placeholder="Song title"></div>
-          <div class="form-row"><label>Direct MP3 / Audio URL</label><input type="text" id="add-song-url" placeholder="https://... (direct link to .mp3)"></div>
-        </div>
-        <button class="btn btn-green mt1" onclick="adminAddSong()">➕ ADD SONG</button>
-      </div>
-    </div>
-    <!-- ADD VIDEO -->
-    <div class="panel" id="panel-add-video">
-      <div class="add-form">
-        <div class="add-form-title" style="color:var(--pink)">🎬 Add a Video</div>
-        <div class="form-grid">
-          <div class="form-row"><label>Title</label><input type="text" id="add-video-title" placeholder="Video title"></div>
-          <div class="form-row"><label>YouTube URL</label><input type="text" id="add-video-url" placeholder="YouTube link"></div>
-          <div class="form-row"><label>Thumbnail URL (optional)</label><input type="text" id="add-video-thumb" placeholder="Image URL"></div>
-        </div>
-        <button class="btn btn-pink mt1" onclick="adminAddVideo()">➕ ADD VIDEO</button>
-      </div>
-    </div>
-    <!-- ADD GAME -->
-    <div class="panel" id="panel-add-game">
-      <div class="add-form">
-        <div class="add-form-title" style="color:var(--green)">🎮 Add a Game</div>
-        <div class="form-grid">
-          <div class="form-row"><label>Game Title</label><input type="text" id="add-game-title" placeholder="Game name"></div>
-          <div class="form-row"><label>Game URL</label><input type="text" id="add-game-url" placeholder="Embed URL"></div>
-          <div class="form-row"><label>Emoji</label><input type="text" id="add-game-emoji" placeholder="🎮" maxlength="4"></div>
-        </div>
-        <button class="btn btn-green mt1" onclick="adminAddGame()">➕ ADD GAME</button>
-      </div>
-    </div>
-    <!-- BANNER -->
-    <div class="panel" id="panel-banner">
-      <div class="add-form">
-        <div class="add-form-title" style="color:var(--pink);">📢 Site Banner</div>
-        <p style="font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:1.2rem;">Banner appears above the BOLT logo on the home page.</p>
-        <div class="form-row">
-          <label>Banner Message</label>
-          <input type="text" id="banner-msg" placeholder="e.g. Updates coming soon! 🔥" oninput="updateBannerPreview()">
-        </div>
-        <div class="form-row">
-          <label>Background Color (10 options)</label>
-          <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem;">
-            <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#BF00FF,#FF10F0)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#BF00FF,#FF10F0);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Purple/Pink"></div>
-            <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#00CED1,#0066FF)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#00CED1,#0066FF);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Teal/Blue"></div>
-            <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#FF6600,#FF10F0)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#FF6600,#FF10F0);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Orange/Pink"></div>
-            <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#39FF14,#00CED1)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#39FF14,#00CED1);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Green/Teal"></div>
-            <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#ff0000,#FF6600)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#ff0000,#FF6600);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Red/Orange"></div>
-            <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#ffff00,#FF6600)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#ffff00,#FF6600);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Yellow/Orange"></div>
-            <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#ffffff,#00CED1)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#ffffff,#00CED1);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="White/Teal"></div>
-            <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#000000,#BF00FF)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#000000,#BF00FF);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid rgba(255,255,255,.2);" title="Black/Purple"></div>
-            <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#FF10F0,#ffff00)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#FF10F0,#ffff00);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Pink/Yellow"></div>
-            <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#0066FF,#39FF14)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#0066FF,#39FF14);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Blue/Green"></div>
-          </div>
-        </div>
-        <div class="form-row">
-          <label>Text Color</label>
-          <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem;">
-            <div class="banner-txt-opt" data-color="#ffffff" onclick="selectBannerTxt(this)" style="background:#ffffff;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
-            <div class="banner-txt-opt" data-color="#000000" onclick="selectBannerTxt(this)" style="background:#000000;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid rgba(255,255,255,.3);"></div>
-            <div class="banner-txt-opt" data-color="#ffff00" onclick="selectBannerTxt(this)" style="background:#ffff00;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
-            <div class="banner-txt-opt" data-color="#00CED1" onclick="selectBannerTxt(this)" style="background:#00CED1;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
-            <div class="banner-txt-opt" data-color="#39FF14" onclick="selectBannerTxt(this)" style="background:#39FF14;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
-            <div class="banner-txt-opt" data-color="#FF10F0" onclick="selectBannerTxt(this)" style="background:#FF10F0;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
-            <div class="banner-txt-opt" data-color="#FF6600" onclick="selectBannerTxt(this)" style="background:#FF6600;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
-            <div class="banner-txt-opt" data-color="#BF00FF" onclick="selectBannerTxt(this)" style="background:#BF00FF;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
-            <div class="banner-txt-opt" data-color="#ff0000" onclick="selectBannerTxt(this)" style="background:#ff0000;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
-            <div class="banner-txt-opt" data-color="#0066FF" onclick="selectBannerTxt(this)" style="background:#0066FF;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
-          </div>
-        </div>
-        <div class="form-row">
-          <label>Banner Shape</label>
-          <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.5rem;">
-            <div class="banner-shape-opt" data-shape="flat" onclick="selectBannerShape(this)" style="cursor:pointer;border:2px solid var(--teal);border-radius:4px;padding:.4rem .8rem;font-size:.6rem;font-family:'Orbitron',monospace;color:var(--teal);">▬ FLAT</div>
-            <div class="banner-shape-opt" data-shape="ribbon" onclick="selectBannerShape(this)" style="cursor:pointer;border:2px solid rgba(255,255,255,.3);border-radius:4px;padding:.4rem .8rem;font-size:.6rem;font-family:'Orbitron',monospace;color:rgba(255,255,255,.5);">◀▬▶ RIBBON</div>
-            <div class="banner-shape-opt" data-shape="arrow" onclick="selectBannerShape(this)" style="cursor:pointer;border:2px solid rgba(255,255,255,.3);border-radius:4px;padding:.4rem .8rem;font-size:.6rem;font-family:'Orbitron',monospace;color:rgba(255,255,255,.5);">▷▬▷ ARROW</div>
-            <div class="banner-shape-opt" data-shape="wave" onclick="selectBannerShape(this)" style="cursor:pointer;border:2px solid rgba(255,255,255,.3);border-radius:4px;padding:.4rem .8rem;font-size:.6rem;font-family:'Orbitron',monospace;color:rgba(255,255,255,.5);">〜 WAVE</div>
-            <div class="banner-shape-opt" data-shape="notch" onclick="selectBannerShape(this)" style="cursor:pointer;border:2px solid rgba(255,255,255,.3);border-radius:4px;padding:.4rem .8rem;font-size:.6rem;font-family:'Orbitron',monospace;color:rgba(255,255,255,.5);">◁▬▷ NOTCH</div>
-          </div>
-        </div>
-        <div style="display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap;">
-          <button class="btn btn-pink" onclick="publishBanner()">📢 PUBLISH BANNER</button>
-          <button class="btn btn-danger" onclick="removeBanner()">✕ REMOVE BANNER</button>
-        </div>
-        <div style="margin-top:1rem;padding:1rem;border-radius:8px;border:1px solid var(--border);">
-          <div style="font-size:.65rem;color:rgba(255,255,255,.4);margin-bottom:.5rem;font-family:'Orbitron',monospace;letter-spacing:2px;">PREVIEW</div>
-          <div id="banner-preview" style="padding:.6rem 1rem;text-align:center;font-family:'Orbitron',monospace;font-size:.75rem;letter-spacing:2px;background:linear-gradient(135deg,#BF00FF,#FF10F0);color:#ffffff;clip-path:none;">Your banner will look like this</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MANAGE -->
-    <div class="panel" id="panel-manage">
-      <div class="section-title">Videos</div><div id="manage-videos"></div>
-      <div class="section-title mt2">Games</div><div id="manage-games"></div>
-      <div class="section-title mt2">Songs with Links</div><div id="manage-songs"></div>
-    </div>
-  </div>
+ <!-- LOGIN -->
+ <div id="admin-login-wrap">
+   <div class="login-box">
+     <div class="login-icon">🔐</div>
+     <div class="login-title">ADMIN ACCESS</div>
+     <div class="login-sub">BOLT CONTROL PANEL</div>
+     <div class="form-row"><label>Password</label><input type="password" id="admin-pw" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()"></div>
+     <button class="btn btn-pink mt1" onclick="doLogin()">⚡ ENTER</button>
+     <div style="margin-top:1rem;"><button class="btn btn-danger" onclick="closeAdmin()">← BACK TO SITE</button></div>
+     <div class="login-error" id="login-error">⚠ INCORRECT PASSWORD</div>
+   </div>
+ </div>
+ <!-- DASHBOARD -->
+ <div id="admin-dash">
+   <div class="admin-hdr">
+     <div class="admin-title">⚡ ADMIN DASHBOARD</div>
+     <div class="admin-btns"><button class="btn btn-danger" onclick="doLogout()">LOGOUT</button><button class="btn btn-primary" onclick="closeAdmin()">← BACK</button></div>
+   </div>
+   <div class="stats-bar" id="stats-bar"></div>
+   <div class="tabs">
+     <button class="tab-btn active" onclick="switchTab('requests')" id="tab-requests">📥 REQUESTS</button>
+     <button class="tab-btn" onclick="switchTab('add-music')" id="tab-add-music">🎵 ADD MUSIC</button>
+     <button class="tab-btn" onclick="switchTab('add-video')" id="tab-add-video">🎬 ADD VIDEO</button>
+     <button class="tab-btn" onclick="switchTab('add-game')" id="tab-add-game">🎮 ADD GAME</button>
+     <button class="tab-btn" onclick="switchTab('manage')" id="tab-manage">⚙ MANAGE</button>
+     <button class="tab-btn" onclick="switchTab('banner')" id="tab-banner">📢 BANNER</button>
+   </div>
+   <!-- REQUESTS -->
+   <div class="panel active" id="panel-requests">
+     <div class="req-filters">
+       <button class="req-filter active" onclick="switchRF('all')" id="rf-all">ALL</button>
+       <button class="req-filter" onclick="switchRF('song')" id="rf-song">🎵 SONGS</button>
+       <button class="req-filter" onclick="switchRF('video')" id="rf-video">🎬 VIDEOS</button>
+       <button class="req-filter" onclick="switchRF('game')" id="rf-game">🎮 GAMES</button>
+     </div>
+     <div class="req-list" id="req-list"></div>
+   </div>
+   <!-- ADD MUSIC -->
+   <div class="panel" id="panel-add-music">
+     <div class="add-form">
+       <div class="add-form-title" style="color:var(--teal)">🎵 Add a Song</div>
+       <div class="info-box">
+         <strong>How to get song links that work:</strong><br>
+         • <strong>Dropbox:</strong> Upload MP3 → Share → copy link → change <code>dl=0</code> to <code>raw=1</code><br>
+         • <strong>Google Drive:</strong> Upload MP3 → Share (anyone with link) → copy file ID → use: <code>https://drive.google.com/uc?export=download&id=FILE_ID</code><br>
+         • <strong>Direct MP3 URL:</strong> Any direct link ending in .mp3 works
+       </div>
+       <div class="form-grid">
+         <div class="form-row"><label>Artist Name</label><input type="text" id="add-artist" placeholder="e.g. Drake"></div>
+         <div class="form-row"><label>Song Name</label><input type="text" id="add-song-name" placeholder="Song title"></div>
+         <div class="form-row"><label>Direct MP3 / Audio URL</label><input type="text" id="add-song-url" placeholder="https://... (direct link to .mp3)"></div>
+       </div>
+       <button class="btn btn-green mt1" onclick="adminAddSong()">➕ ADD SONG</button>
+     </div>
+   </div>
+   <!-- ADD VIDEO -->
+   <div class="panel" id="panel-add-video">
+     <div class="add-form">
+       <div class="add-form-title" style="color:var(--pink)">🎬 Add a Video</div>
+       <div class="form-grid">
+         <div class="form-row"><label>Title</label><input type="text" id="add-video-title" placeholder="Video title"></div>
+         <div class="form-row"><label>YouTube URL</label><input type="text" id="add-video-url" placeholder="YouTube link"></div>
+         <div class="form-row"><label>Thumbnail URL (optional)</label><input type="text" id="add-video-thumb" placeholder="Image URL"></div>
+       </div>
+       <button class="btn btn-pink mt1" onclick="adminAddVideo()">➕ ADD VIDEO</button>
+     </div>
+   </div>
+   <!-- ADD GAME -->
+   <div class="panel" id="panel-add-game">
+     <div class="add-form">
+       <div class="add-form-title" style="color:var(--green)">🎮 Add a Game</div>
+       <div class="form-grid">
+         <div class="form-row"><label>Game Title</label><input type="text" id="add-game-title" placeholder="Game name"></div>
+         <div class="form-row"><label>Game URL</label><input type="text" id="add-game-url" placeholder="Embed URL"></div>
+         <div class="form-row"><label>Emoji</label><input type="text" id="add-game-emoji" placeholder="🎮" maxlength="4"></div>
+       </div>
+       <button class="btn btn-green mt1" onclick="adminAddGame()">➕ ADD GAME</button>
+     </div>
+   </div>
+   <!-- BANNER -->
+   <div class="panel" id="panel-banner">
+     <div class="add-form">
+       <div class="add-form-title" style="color:var(--pink);">📢 Site Banner</div>
+       <p style="font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:1.2rem;">Banner appears above the BOLT logo on the home page.</p>
+       <div class="form-row">
+         <label>Banner Message</label>
+         <input type="text" id="banner-msg" placeholder="e.g. Updates coming soon! 🔥" oninput="updateBannerPreview()">
+       </div>
+       <div class="form-row">
+         <label>Background Color (10 options)</label>
+         <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem;">
+           <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#BF00FF,#FF10F0)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#BF00FF,#FF10F0);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Purple/Pink"></div>
+           <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#00CED1,#0066FF)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#00CED1,#0066FF);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Teal/Blue"></div>
+           <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#FF6600,#FF10F0)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#FF6600,#FF10F0);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Orange/Pink"></div>
+           <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#39FF14,#00CED1)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#39FF14,#00CED1);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Green/Teal"></div>
+           <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#ff0000,#FF6600)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#ff0000,#FF6600);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Red/Orange"></div>
+           <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#ffff00,#FF6600)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#ffff00,#FF6600);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Yellow/Orange"></div>
+           <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#ffffff,#00CED1)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#ffffff,#00CED1);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="White/Teal"></div>
+           <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#000000,#BF00FF)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#000000,#BF00FF);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid rgba(255,255,255,.2);" title="Black/Purple"></div>
+           <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#FF10F0,#ffff00)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#FF10F0,#ffff00);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Pink/Yellow"></div>
+           <div class="banner-bg-opt" data-bg="linear-gradient(135deg,#0066FF,#39FF14)" onclick="selectBannerBg(this)" style="background:linear-gradient(135deg,#0066FF,#39FF14);width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;" title="Blue/Green"></div>
+         </div>
+       </div>
+       <div class="form-row">
+         <label>Text Color</label>
+         <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.5rem;">
+           <div class="banner-txt-opt" data-color="#ffffff" onclick="selectBannerTxt(this)" style="background:#ffffff;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
+           <div class="banner-txt-opt" data-color="#000000" onclick="selectBannerTxt(this)" style="background:#000000;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid rgba(255,255,255,.3);"></div>
+           <div class="banner-txt-opt" data-color="#ffff00" onclick="selectBannerTxt(this)" style="background:#ffff00;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
+           <div class="banner-txt-opt" data-color="#00CED1" onclick="selectBannerTxt(this)" style="background:#00CED1;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
+           <div class="banner-txt-opt" data-color="#39FF14" onclick="selectBannerTxt(this)" style="background:#39FF14;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
+           <div class="banner-txt-opt" data-color="#FF10F0" onclick="selectBannerTxt(this)" style="background:#FF10F0;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
+           <div class="banner-txt-opt" data-color="#FF6600" onclick="selectBannerTxt(this)" style="background:#FF6600;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
+           <div class="banner-txt-opt" data-color="#BF00FF" onclick="selectBannerTxt(this)" style="background:#BF00FF;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
+           <div class="banner-txt-opt" data-color="#ff0000" onclick="selectBannerTxt(this)" style="background:#ff0000;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
+           <div class="banner-txt-opt" data-color="#0066FF" onclick="selectBannerTxt(this)" style="background:#0066FF;width:36px;height:36px;border-radius:6px;cursor:pointer;border:2px solid transparent;"></div>
+         </div>
+       </div>
+       <div class="form-row">
+         <label>Banner Shape</label>
+         <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.5rem;">
+           <div class="banner-shape-opt" data-shape="flat" onclick="selectBannerShape(this)" style="cursor:pointer;border:2px solid var(--teal);border-radius:4px;padding:.4rem .8rem;font-size:.6rem;font-family:'Orbitron',monospace;color:var(--teal);">▬ FLAT</div>
+           <div class="banner-shape-opt" data-shape="ribbon" onclick="selectBannerShape(this)" style="cursor:pointer;border:2px solid rgba(255,255,255,.3);border-radius:4px;padding:.4rem .8rem;font-size:.6rem;font-family:'Orbitron',monospace;color:rgba(255,255,255,.5);">◀▬▶ RIBBON</div>
+           <div class="banner-shape-opt" data-shape="arrow" onclick="selectBannerShape(this)" style="cursor:pointer;border:2px solid rgba(255,255,255,.3);border-radius:4px;padding:.4rem .8rem;font-size:.6rem;font-family:'Orbitron',monospace;color:rgba(255,255,255,.5);">▷▬▷ ARROW</div>
+           <div class="banner-shape-opt" data-shape="wave" onclick="selectBannerShape(this)" style="cursor:pointer;border:2px solid rgba(255,255,255,.3);border-radius:4px;padding:.4rem .8rem;font-size:.6rem;font-family:'Orbitron',monospace;color:rgba(255,255,255,.5);">〜 WAVE</div>
+           <div class="banner-shape-opt" data-shape="notch" onclick="selectBannerShape(this)" style="cursor:pointer;border:2px solid rgba(255,255,255,.3);border-radius:4px;padding:.4rem .8rem;font-size:.6rem;font-family:'Orbitron',monospace;color:rgba(255,255,255,.5);">◁▬▷ NOTCH</div>
+         </div>
+       </div>
+       <div style="display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap;">
+         <button class="btn btn-pink" onclick="publishBanner()">📢 PUBLISH BANNER</button>
+         <button class="btn btn-danger" onclick="removeBanner()">✕ REMOVE BANNER</button>
+       </div>
+       <div style="margin-top:1rem;padding:1rem;border-radius:8px;border:1px solid var(--border);">
+         <div style="font-size:.65rem;color:rgba(255,255,255,.4);margin-bottom:.5rem;font-family:'Orbitron',monospace;letter-spacing:2px;">PREVIEW</div>
+         <div id="banner-preview" style="padding:.6rem 1rem;text-align:center;font-family:'Orbitron',monospace;font-size:.75rem;letter-spacing:2px;background:linear-gradient(135deg,#BF00FF,#FF10F0);color:#ffffff;clip-path:none;">Your banner will look like this</div>
+       </div>
+     </div>
+   </div>
+ 
+   <!-- MANAGE -->
+   <div class="panel" id="panel-manage">
+     <div class="section-title">Videos</div><div id="manage-videos"></div>
+     <div class="section-title mt2">Games</div><div id="manage-games"></div>
+     <div class="section-title mt2">Songs with Links</div><div id="manage-songs"></div>
+   </div>
+ </div>
 </div>
-
+ 
 <div id="toast"></div>
-
+ 
 <script>
 // ══════════════════════════════════════════
 //  DATA
 // ══════════════════════════════════════════
 const ADMIN_PW = 'codeaj2023';
-
+ 
 const ARTISTS = [
-  {name:'Travis Scott',emoji:'🌵',color:'#f97316',songs:[
-    {t:'SICKO MODE',f:'ft. Drake',y:'_BehlK3iDGw'},{t:'FE!N',f:'ft. Playboi Carti',y:'PiADtporXFc'},
-    {t:'GOOSEBUMPS',f:'ft. Kendrick Lamar',y:'Dst9gZkM5GI'},{t:'ANTIDOTE',y:'KFAijGBAmU8'},
-    {t:'HIGHEST IN THE ROOM',y:'YRfGs-f-kbc'},{t:'BUTTERFLY EFFECT',y:'rnMMJbKCyrs'},
-    {t:'PICK UP THE PHONE',f:'ft. Young Thug',y:'iUJqaFv4Mq8'},{t:'SKELETONS',y:'S2aSMWCvwc4'},
-    {t:'MY EYES',y:'OfxvYxU1D14'},{t:'FRANCHISE',f:'ft. Young Thug, MIA',y:'Y5aRKNbHV_M'},
-    {t:'MAFIA',y:'Hf0sCTelPnA'},{t:'TELEKINESIS',y:'8IFnMsCG5tE'}
-  ]},
-  {name:'Kendrick Lamar',emoji:'👑',color:'#a855f7',songs:[
-    {t:'Not Like Us',y:'T6eK-2OQtew'},{t:'HUMBLE.',y:'tvtjye3x0I0'},
-    {t:'Money Trees',f:'ft. Jay Rock',y:'E6aFJV-tLzU'},{t:'Alright',y:'Z-48p4g3T-4'},
-    {t:'Swimming Pools (Drank)',y:'eGDBR2L5kzI'},{t:'Backseat Freestyle',y:'oABEf60GMvA'},
-    {t:'King Kunta',y:'hRK3V_LSXZY'},{t:'m.A.A.d city',f:'ft. MC Eiht',y:'LHjLkXiipfc'},
-    {t:'DNA.',y:'LYZE8-UhJZw'},{t:'ELEMENT.',y:'aF44JvNrMuI'},
-    {t:'euphoria',y:'eFtqDFKOl24'},{t:'Like That',f:'ft. Future & Metro Boomin',y:'GIaBPFNEFhA'}
-  ]},
-  {name:'Drake',emoji:'🦉',color:'#eab308',songs:[
-    {t:"God's Plan",y:'xpVfcZ0ZcFM'},{t:'One Dance',f:'ft. WizKid & Kyla',y:'pNKgHRUFdR0'},
-    {t:'Hotline Bling',y:'uxpDa-c-4Mc'},{t:'Started From the Bottom',y:'RubIPvGCfRE'},
-    {t:'In My Feelings',y:'DRS_PpOrUZ4'},{t:'RICH FLEX',f:'ft. 21 Savage',y:'eEPc9zMgLeU'},
-    {t:'Knife Talk',f:'ft. 21 Savage & Project Pat',y:'P5Px6ZSMIv4'},
-    {t:'Forever',f:'ft. Kanye, Lil Wayne, Eminem',y:'e_s6TF7c0bc'},
-    {t:'Headlines',y:'-lqFlxEBnzA'},{t:"Hold On, We're Going Home",y:'PazSBNIkwZ8'},
-    {t:'Nonstop',y:'hTGX3ZSGBOE'},{t:'Laugh Now Cry Later',f:'ft. Lil Durk',y:'QrGrOK8oZG8'}
-  ]},
-  {name:'J. Cole',emoji:'📜',color:'#22c55e',songs:[
-    {t:'Love Yourz',y:'J8LDYkGAslE'},{t:'Middle Child',y:'QFbj0uBFeSg'},
-    {t:'No Role Modelz',y:'DopHEl1IQXY'},{t:'Power Trip',f:'ft. Miguel',y:'TrAQWM1OZjE'},
-    {t:'Crooked Smile',f:'ft. TLC',y:'a_BpCivPajQ'},{t:'ATM',y:'Fjo8CfLRRzk'},
-    {t:'G.O.M.D.',y:'hmfbOGnxCEg'},{t:'Wet Dreamz',y:'aJKYpDoLKBk'},
-    {t:'Work Out',y:'vSiH8pIi1JE'},{t:'KOD',y:'GIrNzAGTlFI'},
-    {t:'FRIENDS',f:'ft. KSI',y:'Hly6IBEwZ_Q'},{t:'The Climb Back',y:'1lMOzMkW8pI'}
-  ]},
-  {name:'Future',emoji:'🌆',color:'#06b6d4',songs:[
-    {t:'Mask Off',y:'SELH3T3cZl0'},{t:'Life Is Good',f:'ft. Drake',y:'5qm8PH4xAss'},
-    {t:'March Madness',y:'xHmfTCVtWoY'},{t:'Codeine Crazy',y:'BuZJvFb9s4I'},
-    {t:'Stick Talk',y:'O8xV6CpnAug'},{t:'Too Comfortable',y:'v5BH2tyVNNE'},
-    {t:'PIE',f:'ft. Chris Brown',y:'LHGbzFRNBTo'},{t:'Jumpman',f:'ft. Drake',y:'NkbFiVoP_BY'},
-    {t:'Low Life',f:'ft. The Weeknd',y:'F0NnhFgYFTE'},{t:'Used to This',f:'ft. Drake',y:'aFk0OsDLzEI'},
-    {t:'Where Ya At',f:'ft. Drake',y:'_-JBMvW3V4I'},{t:'Type Shit',f:'ft. Metro Boomin, Travis & Playboi Carti',y:'pAiVuFSfLHI'}
-  ]},
-  {name:'Lil Wayne',emoji:'🐊',color:'#ec4899',songs:[
-    {t:'A Milli',y:'KpDExSgMsos'},{t:'Lollipop',y:'TzF2TDtHCK4'},
-    {t:'6 Foot 7 Foot',f:'ft. Cory Gunz',y:'RHLvJAm7q_A'},{t:'Got Money',f:'ft. T-Pain',y:'pKnFGo2zNgA'},
-    {t:'How to Love',y:'O1V4a87jbsA'},{t:'Mirror',f:'ft. Bruno Mars',y:'PedCMkZ6ikc'},
-    {t:'Rich as Fuck',f:'ft. 2 Chainz',y:'K_Bh2YxDYlU'},{t:'Uproar',y:'9iCq6-ZGM3A'},
-    {t:'Glory',y:'oFOBfmNKRHQ'},{t:'No Ceilings',y:'0sRyP8Fqtjc'},
-    {t:'Devastation',f:'ft. Gudda Gudda',y:'LvJJ5IT-JvA'},{t:'John',y:'lU6jbKQC_5s'}
-  ]},
-  {name:'Post Malone',emoji:'🤘',color:'#f43f5e',songs:[
-    {t:'Rockstar',f:'ft. 21 Savage',y:'UceaB4D0jpo'},{t:'Sunflower',f:'ft. Swae Lee',y:'ApXoWvfEYVU'},
-    {t:'Circles',y:'wXhTHyIgQ_U'},{t:'Congratulations',f:'ft. Quavo',y:'SC4xMk98Pdc'},
-    {t:'Better Now',y:'UYwF-jdcVjY'},{t:'White Iverson',y:'yNQULKjPlfw'},
-    {t:'Psycho',f:'ft. Ty Dolla Sign',y:'Ad1_ldPDTAc'},{t:'Saint-Tropez',y:'1TnNgMwL2mI'},
-    {t:'Cooped Up',f:'ft. Roddy Ricch',y:'n3fBLJ8XQHU'},{t:'I Like You',f:'ft. Doja Cat',y:'C9W2mBcJ7rs'},
-    {t:'Chemical',y:'LU8DDyvAwCQ'},{t:"Hollywood's Bleeding",y:'XAFVBSXcAR0'}
-  ]},
-  {name:'21 Savage',emoji:'🔫',color:'#64748b',songs:[
-    {t:'Bank Account',y:'oBqD3xrAjTg'},{t:'No Heart',y:'0oBFqSEqO74'},
-    {t:'X',f:'ft. Future',y:'QOHG7wNFHgM'},{t:'Rockstar',f:'ft. Post Malone',y:'UceaB4D0jpo'},
-    {t:'a lot',f:'ft. J. Cole',y:'LSbqgJA2gg4'},{t:'Prove It',f:'ft. Summer Walker',y:'nHHPE-x-e4U'},
-    {t:'Runnin',f:'ft. Metro Boomin',y:'pAiVuFSfLHI'},{t:'RICH FLEX',f:'ft. Drake',y:'eEPc9zMgLeU'},
-    {t:'Red Sky',y:'OKGPqHvRDEk'},{t:'Spiral',y:'9kNcUt5Fy5A'},
-    {t:'10 Freaky Girls',f:'ft. Metro Boomin',y:'sBOFKD9yjgA'},{t:"should've wore a bonnet",y:'tL1m4pJL5aM'}
-  ]},
-  {name:'Playboi Carti',emoji:'🧛',color:'#dc2626',songs:[
-    {t:'Magnolia',y:'gNzCFMsZfLA'},{t:'wokeuplikethis*',f:'ft. Lil Uzi Vert',y:'PvaBAndJFcI'},
-    {t:'Shoota',f:'ft. Lil Uzi Vert',y:'B3HUk22D5wg'},{t:'FlatBed Freestyle',y:'V9gJjRBHlJg'},
-    {t:"Slay3r",f:"ft. Pi'erre Bourne",y:'4ILrNAqEuP8'},{t:'Sky',y:'y7o4KPJpCH0'},
-    {t:'New Tank',y:'O9cnhPvtUFc'},{t:'ILoveUIHateU',y:'wHp8j9oS8DQ'},
-    {t:'Stop Breathing',y:'9n7snTcS4HE'},{t:'Over',f:'ft. Travis Scott',y:'hBHBcX_EqoE'},
-    {t:'Control',f:'ft. Pierre Bourne',y:'jVqGHLRpLuU'},{t:'Die4Guy',y:'oCxmLToJhgM'}
-  ]},
-  {name:'Lil Uzi Vert',emoji:'💜',color:'#8b5cf6',songs:[
-    {t:'XO TOUR Llif3',y:'xzSQkCHkiM4'},{t:'Money Longer',y:'mQOEq7VdKxM'},
-    {t:'The Way Life Goes',y:'fFMZOYcDEDY'},{t:'Neon Guts',f:'ft. Pharrell Williams',y:'Zqjb_GVMJrM'},
-    {t:'Lucid Dreams',y:'3Hmls8L2ync'},{t:'New Patek',y:'3AoXXHGj0F0'},
-    {t:'That Way',y:'6s3qg9BFWCY'},{t:'Just Wanna Rock',y:'7xSuP6UD2Qc'},
-    {t:'I Know',y:'cFCpCq9j-DA'},{t:'Myron',y:'UfGiELs6JEU'},
-    {t:'Futsal Shuffle 2020',y:'GpF2KPfAOT8'},{t:'Baby Pluto',f:'ft. Future',y:'u_vHMEaqHrA'}
-  ]},
-  {name:'Bad Bunny',emoji:'🐰',color:'#fbbf24',songs:[
-    {t:'Tití Me Preguntó',y:'MIbG6LpRCmE'},{t:'DAKITI',f:'ft. Jhay Cortez',y:'G_gT2jnEJzA'},
-    {t:'Me Porto Bonito',f:'ft. Chencho Corleone',y:'uvVSCQpyL8I'},{t:'Callaíta',y:'BgHYABJy0oE'},
-    {t:'MIA',f:'ft. Drake',y:'7IbWomMqFyI'},{t:'Yonaguni',y:'8j9GCiUl4fs'},
-    {t:'La Noche de Anoche',f:'ft. Rosalía',y:'hH9OLjSd7pI'},{t:'Moscow Mule',y:'yMeEiHBDR-c'},
-    {t:'Where She Goes',y:'17PBwKL1nsk'},{t:'El Apagón',y:'oUqwkYuJi0A'},
-    {t:'Un Verano Sin Ti',y:'BKGS8Q8i1LQ'},{t:'MONACO',y:'zqSjZJRiMOI'}
-  ]},
-  {name:'The Weeknd',emoji:'🌙',color:'#c2410c',songs:[
-    {t:'Blinding Lights',y:'4NRXx6pTmO0'},{t:'Save Your Tears',y:'XXYlFuWEuKI'},
-    {t:'Starboy',f:'ft. Daft Punk',y:'AjjauAeb_XE'},{t:'The Hills',y:'yzTuBuRdAyA'},
-    {t:"Can't Feel My Face",y:'KEI4qSrkPAs'},{t:'Earned It',y:'waU75jf-oxE'},
-    {t:'Often',y:'TfbkwMgMVME'},{t:'Die For You',y:'JvDPRv7LvhE'},
-    {t:'In Your Eyes',f:'ft. Doja Cat',y:'dqRZDebPIGs'},{t:'Take My Breath',y:'bnVUHWCynig'},
-    {t:'I Feel It Coming',f:'ft. Daft Punk',y:'qFLhGq0060w'},{t:'Moth To A Flame',f:'ft. Swedish House Mafia',y:'Q3CopFOcjoo'}
-  ]},
-  {name:'Nicki Minaj',emoji:'👸',color:'#f472b6',songs:[
-    {t:'Super Bass',y:'4JipHEz53sU'},{t:'Anaconda',y:'LDZX4ooRsWs'},
-    {t:'Starships',y:'kYIZeaSHqXI'},{t:'Pills N Potions',y:'qxnMv6P2wuQ'},
-    {t:'Only',f:'ft. Drake, Lil Wayne & Chris Brown',y:'oXdIlxPyPpU'},
-    {t:'Feeling Myself',f:'ft. Beyoncé',y:'AUVqyIGHRu0'},{t:'Monster',f:'ft. Kanye West',y:'L4LUkjO9aYY'},
-    {t:'Did It On Em',y:'IKDL9Tc1_qY'},{t:'Moment 4 Life',f:'ft. Drake',y:'lUOGKUbORBg'},
-    {t:'FEFE',f:'ft. 6ix9ine',y:'q6yZdl-gFiI'},{t:'Good Form',y:'D5Pt4lBpkXc'},
-    {t:'Barbie Dreams',y:'jDfp-M0keww'}
-  ]},
-  {name:'Cardi B',emoji:'💅',color:'#b45309',songs:[
-    {t:'Bodak Yellow',y:'PEGccV-NOm8'},{t:'I Like It',f:'ft. Bad Bunny & J Balvin',y:'BQ0mxQImHIw'},
-    {t:'WAP',f:'ft. Megan Thee Stallion',y:'hsm4poTWjMs'},{t:'Up',y:'BSCd8fqn_ZI'},
-    {t:'Money',y:'d4kEE8yfePQ'},{t:'Be Careful',y:'3Cs-hGUHBxs'},
-    {t:'Bartier Cardi',f:'ft. 21 Savage',y:'GNMqxEBVgME'},{t:'Ring',f:'ft. Kehlani',y:'g0Dsu6TbdEE'},
-    {t:'Press',y:'oOg7g3mXntE'},{t:'Best Life',f:'ft. Chance the Rapper',y:'cFAZShCCULs'},
-    {t:'Like What',y:'XHaQ_FoqXz4'},{t:'Enough (Miami)',y:'Mm9c7CDo_cA'}
-  ]},
-  {name:'Eminem',emoji:'📻',color:'#71717a',songs:[
-    {t:'Lose Yourself',y:'_Yhyp-_hX2s'},{t:'Without Me',y:'YVkUvmDQ3HY'},
-    {t:'The Real Slim Shady',y:'3HjH1pMzRTk'},{t:'Stan',f:'ft. Dido',y:'gOMhN-hfMtY'},
-    {t:'Not Afraid',y:'j5-yKhDd64s'},{t:'Love The Way You Lie',f:'ft. Rihanna',y:'uelHwf8o7_U'},
-    {t:'Rap God',y:'XbGs_qK2PQA'},{t:'Till I Collapse',y:'ytQ3NNZaP6s'},
-    {t:'Godzilla',f:'ft. Juice WRLD',y:'Hym2ZjbNSBM'},{t:'River',f:'ft. Ed Sheeran',y:'cHkFgpCL3C4'},
-    {t:'Lucky You',f:'ft. Joyner Lucas',y:'FkDvmgBbGPo'},{t:'Mockingbird',y:'OBfbPFSVABQ'}
-  ]},
-  {name:'Juice WRLD',emoji:'🕊️',color:'#34d399',songs:[
-    {t:'Lucid Dreams',y:'mzB1VGEGcSU'},{t:'All Girls Are the Same',y:'CGlXxFGsFdI'},
-    {t:'Legends',f:'ft. XXXTentacion',y:'x9oLFPDNVJ0'},{t:'Robbery',y:'iC8t0cLSRhg'},
-    {t:'Righteous',y:'cMMnGtBOlyU'},{t:'Fighting Demons',y:'1ZYL98HZjN8'},
-    {t:'Wishing Well',y:'NeNWlGgWmFM'},{t:'Come & Go',f:'ft. Marshmello',y:'tldAqsErS_g'},
-    {t:'Conversations',y:'tSfbE7BdANI'},{t:"Life's a Mess",f:'ft. Halsey',y:'E4j8Dg4dWXk'},
-    {t:'Hate The Other Side',f:'ft. Marshmello & The Kid LAROI',y:'GNVMjsHwZ2M'},{t:'Already Dead',y:'5j5YVKX5bF8'}
-  ]},
-  {name:'Connor Price',emoji:'🎤',color:'#38bdf8',songs:[
-    {t:'Too Easy',y:'xtCCwDfb2-0'},{t:'Upgrade',y:'9XqBWSt3_8w'},{t:'Scoop',y:'aIS1WIgNxTc'},
-    {t:'Violet',y:'your-violet-id'},{t:'Trendsetter',y:'your-trendsetter-id'},
-    {t:'Spinnin',y:'J7IVjCaC4AA'},{t:'Smoke',y:'your-smoke-id'},{t:'I Need Help',y:'your-i-need-help-id'},
-    {t:'Drop',y:'your-drop-id'},{t:'AMG',y:'your-amg-id'},{t:'Top 10',y:'Q-wsVOv390w'},
-    {t:'Overnight',y:'your-overnight-id'},{t:"Straight A's",y:'your-straightas-id'},
-    {t:'Slide',y:'ZulYhwXiG7w'},{t:'NOW WHAT?',y:'your-nowwhat-id'},
-    {t:'Million Cash',y:'your-millioncash-id'},{t:'Smooth',y:'your-smooth-id'},
-    {t:'SPLAT',y:'your-splat-id'},{t:'Buddy',y:'your-buddy-id'},
-    {t:'NEW PHONE',y:'your-newphone-id'},{t:'Not A Beanie',y:'your-notabeanie-id'},
-    {t:'DIP',y:'your-dip-id'},{t:'Mula',f:'ft. Big Sean',y:'Nj0DGMA8rNc'},
-    {t:'GOLDEN GOOSE',y:'your-goldengoose-id'},{t:'Luv u',y:'-nRNFnvhevs'},
-    {t:'Dabble',y:'4Gz_m4G_th8'},{t:'These Days',y:'your-thesedays-id'},
-    {t:'Thrillin',y:'your-thrillin-id'},{t:'John Wick',y:'your-johnwick-id'},
-    {t:'Riptide',y:'your-riptide-id'},{t:'Still Spinnin',y:'CO_NYYKwnbM'},{t:'Easy',y:'your-easy-id'}
-  ]},
-  {name:'Lil Tecca',emoji:'🧡',color:'#fb923c',songs:[
-    {t:'Ransom',y:'jnGpS0ARBGk'},{t:'Repeat It',f:'ft. Gunna',y:'d4qYmMCDRTs'},
-    {t:'Never Left',y:'XFkFQsqkNmQ'},{t:'Out of Love',y:'2ZhYjMajU5Y'},
-    {t:'K Love',y:'Zq0bNBuRtjY'},{t:'Dolly',y:'hJJILVCDO6I'},
-    {t:'Baby Face Shooter',y:'aFJfFH0CCMA'},{t:'500lbs',y:'Q4vXFNYp5rI'},
-    {t:'Tectoy',y:'XfZ2BEqJOtk'},{t:'Did It Again',y:'XDG8XnxuVek'},
-    {t:'Aye Aye',y:'H4H2fJp73Jk'},{t:'IDGAF',y:'xJRSbZWPBog'}
-  ]}
+ {name:'Travis Scott',emoji:'🌵',color:'#f97316',songs:[
+   {t:'SICKO MODE',f:'ft. Drake',y:'_BehlK3iDGw'},{t:'FE!N',f:'ft. Playboi Carti',y:'PiADtporXFc'},
+   {t:'GOOSEBUMPS',f:'ft. Kendrick Lamar',y:'Dst9gZkM5GI'},{t:'ANTIDOTE',y:'KFAijGBAmU8'},
+   {t:'HIGHEST IN THE ROOM',y:'YRfGs-f-kbc'},{t:'BUTTERFLY EFFECT',y:'rnMMJbKCyrs'},
+   {t:'PICK UP THE PHONE',f:'ft. Young Thug',y:'iUJqaFv4Mq8'},{t:'SKELETONS',y:'S2aSMWCvwc4'},
+   {t:'MY EYES',y:'OfxvYxU1D14'},{t:'FRANCHISE',f:'ft. Young Thug, MIA',y:'Y5aRKNbHV_M'},
+   {t:'MAFIA',y:'Hf0sCTelPnA'},{t:'TELEKINESIS',y:'8IFnMsCG5tE'}
+ ]},
+ {name:'Kendrick Lamar',emoji:'👑',color:'#a855f7',songs:[
+   {t:'Not Like Us',y:'T6eK-2OQtew'},{t:'HUMBLE.',y:'tvtjye3x0I0'},
+   {t:'Money Trees',f:'ft. Jay Rock',y:'E6aFJV-tLzU'},{t:'Alright',y:'Z-48p4g3T-4'},
+   {t:'Swimming Pools (Drank)',y:'eGDBR2L5kzI'},{t:'Backseat Freestyle',y:'oABEf60GMvA'},
+   {t:'King Kunta',y:'hRK3V_LSXZY'},{t:'m.A.A.d city',f:'ft. MC Eiht',y:'LHjLkXiipfc'},
+   {t:'DNA.',y:'LYZE8-UhJZw'},{t:'ELEMENT.',y:'aF44JvNrMuI'},
+   {t:'euphoria',y:'eFtqDFKOl24'},{t:'Like That',f:'ft. Future & Metro Boomin',y:'GIaBPFNEFhA'}
+ ]},
+ {name:'Drake',emoji:'🦉',color:'#eab308',songs:[
+   {t:"God's Plan",y:'xpVfcZ0ZcFM'},{t:'One Dance',f:'ft. WizKid & Kyla',y:'pNKgHRUFdR0'},
+   {t:'Hotline Bling',y:'uxpDa-c-4Mc'},{t:'Started From the Bottom',y:'RubIPvGCfRE'},
+   {t:'In My Feelings',y:'DRS_PpOrUZ4'},{t:'RICH FLEX',f:'ft. 21 Savage',y:'eEPc9zMgLeU'},
+   {t:'Knife Talk',f:'ft. 21 Savage & Project Pat',y:'P5Px6ZSMIv4'},
+   {t:'Forever',f:'ft. Kanye, Lil Wayne, Eminem',y:'e_s6TF7c0bc'},
+   {t:'Headlines',y:'-lqFlxEBnzA'},{t:"Hold On, We're Going Home",y:'PazSBNIkwZ8'},
+   {t:'Nonstop',y:'hTGX3ZSGBOE'},{t:'Laugh Now Cry Later',f:'ft. Lil Durk',y:'QrGrOK8oZG8'}
+ ]},
+ {name:'J. Cole',emoji:'📜',color:'#22c55e',songs:[
+   {t:'Love Yourz',y:'J8LDYkGAslE'},{t:'Middle Child',y:'QFbj0uBFeSg'},
+   {t:'No Role Modelz',y:'DopHEl1IQXY'},{t:'Power Trip',f:'ft. Miguel',y:'TrAQWM1OZjE'},
+   {t:'Crooked Smile',f:'ft. TLC',y:'a_BpCivPajQ'},{t:'ATM',y:'Fjo8CfLRRzk'},
+   {t:'G.O.M.D.',y:'hmfbOGnxCEg'},{t:'Wet Dreamz',y:'aJKYpDoLKBk'},
+   {t:'Work Out',y:'vSiH8pIi1JE'},{t:'KOD',y:'GIrNzAGTlFI'},
+   {t:'FRIENDS',f:'ft. KSI',y:'Hly6IBEwZ_Q'},{t:'The Climb Back',y:'1lMOzMkW8pI'}
+ ]},
+ {name:'Future',emoji:'🌆',color:'#06b6d4',songs:[
+   {t:'Mask Off',y:'SELH3T3cZl0'},{t:'Life Is Good',f:'ft. Drake',y:'5qm8PH4xAss'},
+   {t:'March Madness',y:'xHmfTCVtWoY'},{t:'Codeine Crazy',y:'BuZJvFb9s4I'},
+   {t:'Stick Talk',y:'O8xV6CpnAug'},{t:'Too Comfortable',y:'v5BH2tyVNNE'},
+   {t:'PIE',f:'ft. Chris Brown',y:'LHGbzFRNBTo'},{t:'Jumpman',f:'ft. Drake',y:'NkbFiVoP_BY'},
+   {t:'Low Life',f:'ft. The Weeknd',y:'F0NnhFgYFTE'},{t:'Used to This',f:'ft. Drake',y:'aFk0OsDLzEI'},
+   {t:'Where Ya At',f:'ft. Drake',y:'_-JBMvW3V4I'},{t:'Type Shit',f:'ft. Metro Boomin, Travis & Playboi Carti',y:'pAiVuFSfLHI'}
+ ]},
+ {name:'Lil Wayne',emoji:'🐊',color:'#ec4899',songs:[
+   {t:'A Milli',y:'KpDExSgMsos'},{t:'Lollipop',y:'TzF2TDtHCK4'},
+   {t:'6 Foot 7 Foot',f:'ft. Cory Gunz',y:'RHLvJAm7q_A'},{t:'Got Money',f:'ft. T-Pain',y:'pKnFGo2zNgA'},
+   {t:'How to Love',y:'O1V4a87jbsA'},{t:'Mirror',f:'ft. Bruno Mars',y:'PedCMkZ6ikc'},
+   {t:'Rich as Fuck',f:'ft. 2 Chainz',y:'K_Bh2YxDYlU'},{t:'Uproar',y:'9iCq6-ZGM3A'},
+   {t:'Glory',y:'oFOBfmNKRHQ'},{t:'No Ceilings',y:'0sRyP8Fqtjc'},
+   {t:'Devastation',f:'ft. Gudda Gudda',y:'LvJJ5IT-JvA'},{t:'John',y:'lU6jbKQC_5s'}
+ ]},
+ {name:'Post Malone',emoji:'🤘',color:'#f43f5e',songs:[
+   {t:'Rockstar',f:'ft. 21 Savage',y:'UceaB4D0jpo'},{t:'Sunflower',f:'ft. Swae Lee',y:'ApXoWvfEYVU'},
+   {t:'Circles',y:'wXhTHyIgQ_U'},{t:'Congratulations',f:'ft. Quavo',y:'SC4xMk98Pdc'},
+   {t:'Better Now',y:'UYwF-jdcVjY'},{t:'White Iverson',y:'yNQULKjPlfw'},
+   {t:'Psycho',f:'ft. Ty Dolla Sign',y:'Ad1_ldPDTAc'},{t:'Saint-Tropez',y:'1TnNgMwL2mI'},
+   {t:'Cooped Up',f:'ft. Roddy Ricch',y:'n3fBLJ8XQHU'},{t:'I Like You',f:'ft. Doja Cat',y:'C9W2mBcJ7rs'},
+   {t:'Chemical',y:'LU8DDyvAwCQ'},{t:"Hollywood's Bleeding",y:'XAFVBSXcAR0'}
+ ]},
+ {name:'21 Savage',emoji:'🔫',color:'#64748b',songs:[
+   {t:'Bank Account',y:'oBqD3xrAjTg'},{t:'No Heart',y:'0oBFqSEqO74'},
+   {t:'X',f:'ft. Future',y:'QOHG7wNFHgM'},{t:'Rockstar',f:'ft. Post Malone',y:'UceaB4D0jpo'},
+   {t:'a lot',f:'ft. J. Cole',y:'LSbqgJA2gg4'},{t:'Prove It',f:'ft. Summer Walker',y:'nHHPE-x-e4U'},
+   {t:'Runnin',f:'ft. Metro Boomin',y:'pAiVuFSfLHI'},{t:'RICH FLEX',f:'ft. Drake',y:'eEPc9zMgLeU'},
+   {t:'Red Sky',y:'OKGPqHvRDEk'},{t:'Spiral',y:'9kNcUt5Fy5A'},
+   {t:'10 Freaky Girls',f:'ft. Metro Boomin',y:'sBOFKD9yjgA'},{t:"should've wore a bonnet",y:'tL1m4pJL5aM'}
+ ]},
+ {name:'Playboi Carti',emoji:'🧛',color:'#dc2626',songs:[
+   {t:'Magnolia',y:'gNzCFMsZfLA'},{t:'wokeuplikethis*',f:'ft. Lil Uzi Vert',y:'PvaBAndJFcI'},
+   {t:'Shoota',f:'ft. Lil Uzi Vert',y:'B3HUk22D5wg'},{t:'FlatBed Freestyle',y:'V9gJjRBHlJg'},
+   {t:"Slay3r",f:"ft. Pi'erre Bourne",y:'4ILrNAqEuP8'},{t:'Sky',y:'y7o4KPJpCH0'},
+   {t:'New Tank',y:'O9cnhPvtUFc'},{t:'ILoveUIHateU',y:'wHp8j9oS8DQ'},
+   {t:'Stop Breathing',y:'9n7snTcS4HE'},{t:'Over',f:'ft. Travis Scott',y:'hBHBcX_EqoE'},
+   {t:'Control',f:'ft. Pierre Bourne',y:'jVqGHLRpLuU'},{t:'Die4Guy',y:'oCxmLToJhgM'}
+ ]},
+ {name:'Lil Uzi Vert',emoji:'💜',color:'#8b5cf6',songs:[
+   {t:'XO TOUR Llif3',y:'xzSQkCHkiM4'},{t:'Money Longer',y:'mQOEq7VdKxM'},
+   {t:'The Way Life Goes',y:'fFMZOYcDEDY'},{t:'Neon Guts',f:'ft. Pharrell Williams',y:'Zqjb_GVMJrM'},
+   {t:'Lucid Dreams',y:'3Hmls8L2ync'},{t:'New Patek',y:'3AoXXHGj0F0'},
+   {t:'That Way',y:'6s3qg9BFWCY'},{t:'Just Wanna Rock',y:'7xSuP6UD2Qc'},
+   {t:'I Know',y:'cFCpCq9j-DA'},{t:'Myron',y:'UfGiELs6JEU'},
+   {t:'Futsal Shuffle 2020',y:'GpF2KPfAOT8'},{t:'Baby Pluto',f:'ft. Future',y:'u_vHMEaqHrA'}
+ ]},
+ {name:'Bad Bunny',emoji:'🐰',color:'#fbbf24',songs:[
+   {t:'Tití Me Preguntó',y:'MIbG6LpRCmE'},{t:'DAKITI',f:'ft. Jhay Cortez',y:'G_gT2jnEJzA'},
+   {t:'Me Porto Bonito',f:'ft. Chencho Corleone',y:'uvVSCQpyL8I'},{t:'Callaíta',y:'BgHYABJy0oE'},
+   {t:'MIA',f:'ft. Drake',y:'7IbWomMqFyI'},{t:'Yonaguni',y:'8j9GCiUl4fs'},
+   {t:'La Noche de Anoche',f:'ft. Rosalía',y:'hH9OLjSd7pI'},{t:'Moscow Mule',y:'yMeEiHBDR-c'},
+   {t:'Where She Goes',y:'17PBwKL1nsk'},{t:'El Apagón',y:'oUqwkYuJi0A'},
+   {t:'Un Verano Sin Ti',y:'BKGS8Q8i1LQ'},{t:'MONACO',y:'zqSjZJRiMOI'}
+ ]},
+ {name:'The Weeknd',emoji:'🌙',color:'#c2410c',songs:[
+   {t:'Blinding Lights',y:'4NRXx6pTmO0'},{t:'Save Your Tears',y:'XXYlFuWEuKI'},
+   {t:'Starboy',f:'ft. Daft Punk',y:'AjjauAeb_XE'},{t:'The Hills',y:'yzTuBuRdAyA'},
+   {t:"Can't Feel My Face",y:'KEI4qSrkPAs'},{t:'Earned It',y:'waU75jf-oxE'},
+   {t:'Often',y:'TfbkwMgMVME'},{t:'Die For You',y:'JvDPRv7LvhE'},
+   {t:'In Your Eyes',f:'ft. Doja Cat',y:'dqRZDebPIGs'},{t:'Take My Breath',y:'bnVUHWCynig'},
+   {t:'I Feel It Coming',f:'ft. Daft Punk',y:'qFLhGq0060w'},{t:'Moth To A Flame',f:'ft. Swedish House Mafia',y:'Q3CopFOcjoo'}
+ ]},
+ {name:'Nicki Minaj',emoji:'👸',color:'#f472b6',songs:[
+   {t:'Super Bass',y:'4JipHEz53sU'},{t:'Anaconda',y:'LDZX4ooRsWs'},
+   {t:'Starships',y:'kYIZeaSHqXI'},{t:'Pills N Potions',y:'qxnMv6P2wuQ'},
+   {t:'Only',f:'ft. Drake, Lil Wayne & Chris Brown',y:'oXdIlxPyPpU'},
+   {t:'Feeling Myself',f:'ft. Beyoncé',y:'AUVqyIGHRu0'},{t:'Monster',f:'ft. Kanye West',y:'L4LUkjO9aYY'},
+   {t:'Did It On Em',y:'IKDL9Tc1_qY'},{t:'Moment 4 Life',f:'ft. Drake',y:'lUOGKUbORBg'},
+   {t:'FEFE',f:'ft. 6ix9ine',y:'q6yZdl-gFiI'},{t:'Good Form',y:'D5Pt4lBpkXc'},
+   {t:'Barbie Dreams',y:'jDfp-M0keww'}
+ ]},
+ {name:'Cardi B',emoji:'💅',color:'#b45309',songs:[
+   {t:'Bodak Yellow',y:'PEGccV-NOm8'},{t:'I Like It',f:'ft. Bad Bunny & J Balvin',y:'BQ0mxQImHIw'},
+   {t:'WAP',f:'ft. Megan Thee Stallion',y:'hsm4poTWjMs'},{t:'Up',y:'BSCd8fqn_ZI'},
+   {t:'Money',y:'d4kEE8yfePQ'},{t:'Be Careful',y:'3Cs-hGUHBxs'},
+   {t:'Bartier Cardi',f:'ft. 21 Savage',y:'GNMqxEBVgME'},{t:'Ring',f:'ft. Kehlani',y:'g0Dsu6TbdEE'},
+   {t:'Press',y:'oOg7g3mXntE'},{t:'Best Life',f:'ft. Chance the Rapper',y:'cFAZShCCULs'},
+   {t:'Like What',y:'XHaQ_FoqXz4'},{t:'Enough (Miami)',y:'Mm9c7CDo_cA'}
+ ]},
+ {name:'Eminem',emoji:'📻',color:'#71717a',songs:[
+   {t:'Lose Yourself',y:'_Yhyp-_hX2s'},{t:'Without Me',y:'YVkUvmDQ3HY'},
+   {t:'The Real Slim Shady',y:'3HjH1pMzRTk'},{t:'Stan',f:'ft. Dido',y:'gOMhN-hfMtY'},
+   {t:'Not Afraid',y:'j5-yKhDd64s'},{t:'Love The Way You Lie',f:'ft. Rihanna',y:'uelHwf8o7_U'},
+   {t:'Rap God',y:'XbGs_qK2PQA'},{t:'Till I Collapse',y:'ytQ3NNZaP6s'},
+   {t:'Godzilla',f:'ft. Juice WRLD',y:'Hym2ZjbNSBM'},{t:'River',f:'ft. Ed Sheeran',y:'cHkFgpCL3C4'},
+   {t:'Lucky You',f:'ft. Joyner Lucas',y:'FkDvmgBbGPo'},{t:'Mockingbird',y:'OBfbPFSVABQ'}
+ ]},
+ {name:'Juice WRLD',emoji:'🕊️',color:'#34d399',songs:[
+   {t:'Lucid Dreams',y:'mzB1VGEGcSU'},{t:'All Girls Are the Same',y:'CGlXxFGsFdI'},
+   {t:'Legends',f:'ft. XXXTentacion',y:'x9oLFPDNVJ0'},{t:'Robbery',y:'iC8t0cLSRhg'},
+   {t:'Righteous',y:'cMMnGtBOlyU'},{t:'Fighting Demons',y:'1ZYL98HZjN8'},
+   {t:'Wishing Well',y:'NeNWlGgWmFM'},{t:'Come & Go',f:'ft. Marshmello',y:'tldAqsErS_g'},
+   {t:'Conversations',y:'tSfbE7BdANI'},{t:"Life's a Mess",f:'ft. Halsey',y:'E4j8Dg4dWXk'},
+   {t:'Hate The Other Side',f:'ft. Marshmello & The Kid LAROI',y:'GNVMjsHwZ2M'},{t:'Already Dead',y:'5j5YVKX5bF8'}
+ ]},
+ {name:'Connor Price',emoji:'🎤',color:'#38bdf8',songs:[
+   {t:'Too Easy',y:'xtCCwDfb2-0'},{t:'Upgrade',y:'9XqBWSt3_8w'},{t:'Scoop',y:'aIS1WIgNxTc'},
+   {t:'Violet',y:'your-violet-id'},{t:'Trendsetter',y:'your-trendsetter-id'},
+   {t:'Spinnin',y:'J7IVjCaC4AA'},{t:'Smoke',y:'your-smoke-id'},{t:'I Need Help',y:'your-i-need-help-id'},
+   {t:'Drop',y:'your-drop-id'},{t:'AMG',y:'your-amg-id'},{t:'Top 10',y:'Q-wsVOv390w'},
+   {t:'Overnight',y:'your-overnight-id'},{t:"Straight A's",y:'your-straightas-id'},
+   {t:'Slide',y:'ZulYhwXiG7w'},{t:'NOW WHAT?',y:'your-nowwhat-id'},
+   {t:'Million Cash',y:'your-millioncash-id'},{t:'Smooth',y:'your-smooth-id'},
+   {t:'SPLAT',y:'your-splat-id'},{t:'Buddy',y:'your-buddy-id'},
+   {t:'NEW PHONE',y:'your-newphone-id'},{t:'Not A Beanie',y:'your-notabeanie-id'},
+   {t:'DIP',y:'your-dip-id'},{t:'Mula',f:'ft. Big Sean',y:'Nj0DGMA8rNc'},
+   {t:'GOLDEN GOOSE',y:'your-goldengoose-id'},{t:'Luv u',y:'-nRNFnvhevs'},
+   {t:'Dabble',y:'4Gz_m4G_th8'},{t:'These Days',y:'your-thesedays-id'},
+   {t:'Thrillin',y:'your-thrillin-id'},{t:'John Wick',y:'your-johnwick-id'},
+   {t:'Riptide',y:'your-riptide-id'},{t:'Still Spinnin',y:'CO_NYYKwnbM'},{t:'Easy',y:'your-easy-id'}
+ ]},
+ {name:'Lil Tecca',emoji:'🧡',color:'#fb923c',songs:[
+   {t:'Ransom',y:'jnGpS0ARBGk'},{t:'Repeat It',f:'ft. Gunna',y:'d4qYmMCDRTs'},
+   {t:'Never Left',y:'XFkFQsqkNmQ'},{t:'Out of Love',y:'2ZhYjMajU5Y'},
+   {t:'K Love',y:'Zq0bNBuRtjY'},{t:'Dolly',y:'hJJILVCDO6I'},
+   {t:'Baby Face Shooter',y:'aFJfFH0CCMA'},{t:'500lbs',y:'Q4vXFNYp5rI'},
+   {t:'Tectoy',y:'XfZ2BEqJOtk'},{t:'Did It Again',y:'XDG8XnxuVek'},
+   {t:'Aye Aye',y:'H4H2fJp73Jk'},{t:'IDGAF',y:'xJRSbZWPBog'}
+ ]}
 ];
-
+ 
 const DEFAULT_GAMES = [
-  {title:'Time Shooter 2',emoji:'🔫',url:'https://games.crazygames.com/en_US/time-shooter-2/index.html'},
-  {title:'Time Shooter 3',emoji:'💥',url:'https://games.crazygames.com/en_US/time-shooter-3-swat/index.html'},
-  {title:'Smash Karts',emoji:'🏎️',url:'https://games.crazygames.com/en_US/smash-karts/index.html'},
-  {title:'Stickman Hook',emoji:'🕺',url:'https://html5.gamedistribution.com/7a8cdefdea2a48c585a1c43d9d19099c/'},
-  {title:'Knife Hit',emoji:'🔪',url:'https://html5.gamedistribution.com/3a59eedc64d44e6b92a2a35ac65ed0bb/'},
-  {title:'Stack',emoji:'🟦',url:'https://html5.gamedistribution.com/5b1cbb7f59174c5e94e8db2d32c40c55/'},
-  {title:'Helix Jump',emoji:'🌀',url:'https://html5.gamedistribution.com/ee3e79e8a80c4e698e3ab878e9c8547a/'},
-  {title:'2048',emoji:'🔢',url:'https://html5.gamedistribution.com/c8d50ef271454e1099c5b4a4c4aff5da/'},
-  {title:'Subway Surfers',emoji:'🛹',url:'https://html5.gamedistribution.com/4e35076a7c1f42d7a3c6c6a1b6e9cdb6/'},
-  {title:'Snake',emoji:'🐍',url:'https://hfmanor.com/snake'},
-  {title:'Bloxorz',emoji:'📦',url:'https://hfmanor.com/bloxors'},
-  {title:'Chess',emoji:'♟️',url:'https://playpager.com/embed/chess/index.html'},
+ {title:'Time Shooter 2',emoji:'🔫',url:'https://games.crazygames.com/en_US/time-shooter-2/index.html'},
+ {title:'Time Shooter 3',emoji:'💥',url:'https://games.crazygames.com/en_US/time-shooter-3-swat/index.html'},
+ {title:'Smash Karts',emoji:'🏎️',url:'https://games.crazygames.com/en_US/smash-karts/index.html'},
+ {title:'Stickman Swing',emoji:'🕺',url:'https://unblocked-games.s3.amazonaws.com/stickman-swing.html'},
+ {title:'Geometry Dash',emoji:'🔶',url:'https://geometrydash.io/lite'},
+ {title:'Slope',emoji:'🟢',url:'https://slope-game.github.io/'},
+ {title:'2048',emoji:'🔢',url:'https://play2048.co/'},
+ {title:'Snake',emoji:'🐍',url:'https://playpager.com/embed/snake/index.html'},
+ {title:'Chess',emoji:'♟️',url:'https://playpager.com/embed/chess/index.html'},
+ {title:'Checkers',emoji:'🔴',url:'https://playpager.com/embed/checkers/index.html'},
+ {title:'Solitaire',emoji:'🃏',url:'https://playpager.com/embed/solitaire/index.html'},
+ {title:'Moto X3M',emoji:'🏍️',url:'https://games.crazygames.com/en_US/moto-x3m/index.html'},
 ];
-
+ 
 // ══════════════════════════════════════════
 //  STORAGE
 // ══════════════════════════════════════════
 const LS = {
-  get:(k,d)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):d;}catch{return d;}},
-  set:(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch{}}
+ get:(k,d)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):d;}catch{return d;}},
+ set:(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch{}}
 };
 const getReqs=()=>LS.get('bolt_requests',[]);
 const saveReqs=r=>LS.set('bolt_requests',r);
 const getVids=()=>LS.get('bolt_videos',[]);
 const saveVids=v=>LS.set('bolt_videos',v);
+const GAME_VERSION = 'v5';
 const getGames=()=>{
-  const s=LS.get('bolt_games',null);
-  if(!s||!s.length||(s[0]&&s[0].url&&(s[0].url.includes('miniplay')||s[0].url.includes('crazygames.com/embed')||s[0].url.includes('krunker.io')||s[0].url.includes('slope')))){LS.set('bolt_games',DEFAULT_GAMES);return DEFAULT_GAMES;}
-  return s;
+ const v=LS.get('bolt_games_version',null);
+ const s=LS.get('bolt_games',null);
+ if(!s||!s.length||v!==GAME_VERSION){
+   LS.set('bolt_games',DEFAULT_GAMES);
+   LS.set('bolt_games_version',GAME_VERSION);
+   return DEFAULT_GAMES;
+ }
+ return s;
 };
 const saveGames=g=>LS.set('bolt_games',g);
 // Song URLs stored separately — artist+title as key
 const getSongURLs=()=>LS.get('bolt_song_urls',{});
 const saveSongURLs=u=>LS.set('bolt_song_urls',u);
-
+ 
 // ══════════════════════════════════════════
 //  NAVIGATION
 // ══════════════════════════════════════════
 function showPage(p){
-  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
-  document.querySelectorAll('.nav-links a').forEach(x=>x.classList.remove('active'));
-  document.getElementById('page-'+p).classList.add('active');
-  const n=document.getElementById('nav-'+p);if(n)n.classList.add('active');
-  if(p==='music')renderMusic();
-  if(p==='videos')renderVideos();
-  if(p==='games')renderGames();
+ document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+ document.querySelectorAll('.nav-links a').forEach(x=>x.classList.remove('active'));
+ document.getElementById('page-'+p).classList.add('active');
+ const n=document.getElementById('nav-'+p);if(n)n.classList.add('active');
+ if(p==='music')renderMusic();
+ if(p==='videos')renderVideos();
+ if(p==='games')renderGames();
 }
-
+ 
 // ══════════════════════════════════════════
 //  MUSIC PLAYER — HTML5 Audio
 // ══════════════════════════════════════════
 async function openPlayer(title, artist, ytId) {
-  const player = document.getElementById('mini-player');
-  const audio = document.getElementById('player-audio');
-  const noteEl = document.getElementById('player-note');
-  const frameWrap = document.getElementById('player-frame-wrap');
-  const frame = document.getElementById('player-iframe');
-
-  document.getElementById('player-song').textContent = title;
-  document.getElementById('player-artist').textContent = artist;
-  document.querySelectorAll('.song-item').forEach(s=>s.classList.remove('playing'));
-
-  audio.style.display = 'none';
-  frameWrap.style.display = 'block';
-  noteEl.innerHTML = '⏳ Loading...';
-  frame.src = '';
-  player.style.display = 'block';
-
-  setTimeout(function(){
-    var h = player.offsetHeight;
-    document.querySelectorAll('.page').forEach(function(p){ p.style.paddingTop = (64+h) + 'px'; });
-  }, 80);
-
-  // Always search fresh first — exactly like your Replit site
-  // Try multiple search queries to maximize chances of finding embeddable video
-  const queries = [
-    artist + ' ' + title + ' official audio',
-    artist + ' ' + title + ' lyrics',
-    artist + ' ' + title,
-  ];
-
-  for (const query of queries) {
-    try {
-      const res = await fetch('/api/youtube?q=' + encodeURIComponent(query));
-      if (!res.ok) continue;
-      const data = await res.json();
-      const ids = [data.videoId, ...(data.alternatives || [])].filter(Boolean);
-      
-      for (const id of ids) {
-        // Test if this video allows embedding by checking the oEmbed API
-        try {
-          const check = await fetch('https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=' + id + '&format=json');
-          if (check.ok) {
-            frame.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
-            noteEl.innerHTML = '';
-            return;
-          }
-        } catch(e) { continue; }
-      }
-    } catch(e) { continue; }
-  }
-
-  // Final fallback — use hardcoded ytId
-  if (ytId) {
-    frame.src = 'https://www.youtube.com/embed/' + ytId + '?autoplay=1&rel=0';
-    noteEl.innerHTML = '';
-  } else {
-    frameWrap.style.display = 'none';
-    var q = encodeURIComponent(artist + ' ' + title + ' official audio');
-    window.open('https://www.youtube.com/results?search_query=' + q, '_blank');
-    noteEl.innerHTML = '🎵 Opened YouTube search for this song.';
-  }
+ const player = document.getElementById('mini-player');
+ const audio = document.getElementById('player-audio');
+ const noteEl = document.getElementById('player-note');
+ const frameWrap = document.getElementById('player-frame-wrap');
+ const frame = document.getElementById('player-iframe');
+ 
+ document.getElementById('player-song').textContent = title;
+ document.getElementById('player-artist').textContent = artist;
+ document.querySelectorAll('.song-item').forEach(s=>s.classList.remove('playing'));
+ 
+ audio.style.display = 'none';
+ frameWrap.style.display = 'block';
+ noteEl.innerHTML = '⏳ Loading...';
+ frame.src = '';
+ player.style.display = 'block';
+ 
+ setTimeout(function(){
+   var h = player.offsetHeight;
+   document.querySelectorAll('.page').forEach(function(p){ p.style.paddingTop = (64+h) + 'px'; });
+ }, 80);
+ 
+ // Always search fresh first — exactly like your Replit site
+ // Try multiple search queries to maximize chances of finding embeddable video
+ const queries = [
+   artist + ' ' + title + ' official audio',
+   artist + ' ' + title + ' lyrics',
+   artist + ' ' + title,
+ ];
+ 
+ for (const query of queries) {
+   try {
+     const res = await fetch('/api/youtube?q=' + encodeURIComponent(query));
+     if (!res.ok) continue;
+     const data = await res.json();
+     const ids = [data.videoId, ...(data.alternatives || [])].filter(Boolean);
+    
+     for (const id of ids) {
+       // Test if this video allows embedding by checking the oEmbed API
+       try {
+         const check = await fetch('https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=' + id + '&format=json');
+         if (check.ok) {
+           frame.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+           noteEl.innerHTML = '';
+           return;
+         }
+       } catch(e) { continue; }
+     }
+   } catch(e) { continue; }
+ }
+ 
+ // Final fallback — use hardcoded ytId
+ if (ytId) {
+   frame.src = 'https://www.youtube.com/embed/' + ytId + '?autoplay=1&rel=0';
+   noteEl.innerHTML = '';
+ } else {
+   frameWrap.style.display = 'none';
+   var q = encodeURIComponent(artist + ' ' + title + ' official audio');
+   window.open('https://www.youtube.com/results?search_query=' + q, '_blank');
+   noteEl.innerHTML = '🎵 Opened YouTube search for this song.';
+ }
 }
-
+ 
 function openPlayerURL(title, artist, url) {
-  const player = document.getElementById('mini-player');
-  const frameWrap = document.getElementById('player-frame-wrap');
-  const frame = document.getElementById('player-iframe');
-  const noteEl = document.getElementById('player-note');
-
-  document.getElementById('player-song').textContent = title;
-  document.getElementById('player-artist').textContent = artist;
-
-  let src = url;
-  if (url.includes('youtube.com/watch')) {
-    try { const v = new URL(url).searchParams.get('v'); src = 'https://www.youtube.com/embed/' + v + '?autoplay=1'; } catch(e) {}
-  } else if (url.includes('youtu.be/')) {
-    src = 'https://www.youtube.com/embed/' + url.split('youtu.be/')[1].split('?')[0] + '?autoplay=1';
-  } else if (url.includes('soundcloud.com')) {
-    src = 'https://w.soundcloud.com/player/?url=' + encodeURIComponent(url) + '&auto_play=true';
-  }
-
-  frameWrap.style.display = 'block';
-  frame.src = src;
-  noteEl.innerHTML = '';
-  player.style.display = 'block';
-  setTimeout(function(){
-    var h = player.offsetHeight;
-    document.querySelectorAll('.page').forEach(function(p){ p.style.paddingTop = (64+h) + 'px'; });
-  }, 80);
+ const player = document.getElementById('mini-player');
+ const frameWrap = document.getElementById('player-frame-wrap');
+ const frame = document.getElementById('player-iframe');
+ const noteEl = document.getElementById('player-note');
+ 
+ document.getElementById('player-song').textContent = title;
+ document.getElementById('player-artist').textContent = artist;
+ 
+ let src = url;
+ if (url.includes('youtube.com/watch')) {
+   try { const v = new URL(url).searchParams.get('v'); src = 'https://www.youtube.com/embed/' + v + '?autoplay=1'; } catch(e) {}
+ } else if (url.includes('youtu.be/')) {
+   src = 'https://www.youtube.com/embed/' + url.split('youtu.be/')[1].split('?')[0] + '?autoplay=1';
+ } else if (url.includes('soundcloud.com')) {
+   src = 'https://w.soundcloud.com/player/?url=' + encodeURIComponent(url) + '&auto_play=true';
+ }
+ 
+ frameWrap.style.display = 'block';
+ frame.src = src;
+ noteEl.innerHTML = '';
+ player.style.display = 'block';
+ setTimeout(function(){
+   var h = player.offsetHeight;
+   document.querySelectorAll('.page').forEach(function(p){ p.style.paddingTop = (64+h) + 'px'; });
+ }, 80);
 }
-
+ 
 function closePlayer(){
-  var audio = document.getElementById('player-audio');
-  audio.pause(); audio.src = '';
-  var frame = document.getElementById('player-iframe');
-  if(frame) frame.src = '';
-  document.getElementById('mini-player').style.display = 'none';
-  document.querySelectorAll('.page').forEach(function(p){ p.style.paddingTop='64px'; });
-  document.querySelectorAll('.song-item').forEach(function(s){ s.classList.remove('playing'); });
+ var audio = document.getElementById('player-audio');
+ audio.pause(); audio.src = '';
+ var frame = document.getElementById('player-iframe');
+ if(frame) frame.src = '';
+ document.getElementById('mini-player').style.display = 'none';
+ document.querySelectorAll('.page').forEach(function(p){ p.style.paddingTop='64px'; });
+ document.querySelectorAll('.song-item').forEach(function(s){ s.classList.remove('playing'); });
 }
-
+ 
 // ══════════════════════════════════════════
 //  MUSIC RENDER
 // ══════════════════════════════════════════
 function renderMusic(){
-  const grid = document.getElementById('artist-grid');
-  grid.innerHTML = '';
-  const extraSongs = LS.get('bolt_other_songs', []);
-  
+ const grid = document.getElementById('artist-grid');
+ grid.innerHTML = '';
+ const extraSongs = LS.get('bolt_other_songs', []);
   // Merge admin-added songs into correct artist
-  const mergedArtists = ARTISTS.map(artist => {
-    const added = extraSongs.filter(s => 
-      s.artist.toLowerCase() === artist.name.toLowerCase()
-    );
-    if (!added.length) return artist;
-    return {
-      ...artist,
-      songs: [
-        ...artist.songs,
-        ...added.map(s => ({ t: s.title, f: '', y: '', _url: s.url }))
-      ]
-    };
-  });
-
-  // Songs that don't match any artist go to "Other"
-  const otherSongs = extraSongs.filter(s => 
-    !ARTISTS.find(a => a.name.toLowerCase() === s.artist.toLowerCase())
-  );
-
-  mergedArtists.forEach((artist, i) => grid.appendChild(makeArtistCard(artist, i)));
-
-  if (otherSongs.length) {
-    const otherArtist = {
-      name: 'Other',
-      emoji: '🎵',
-      color: '#ffffff',
-      songs: otherSongs.map(s => ({ t: s.title, f: s.artist, y: '', _url: s.url }))
-    };
-    grid.appendChild(makeArtistCard(otherArtist, 'other'));
-  }
+ const mergedArtists = ARTISTS.map(artist => {
+   const added = extraSongs.filter(s =>
+     s.artist.toLowerCase() === artist.name.toLowerCase()
+   );
+   if (!added.length) return artist;
+   return {
+     ...artist,
+     songs: [
+       ...artist.songs,
+       ...added.map(s => ({ t: s.title, f: '', y: '', _url: s.url }))
+     ]
+   };
+ });
+ 
+ // Songs that don't match any artist go to "Other"
+ const otherSongs = extraSongs.filter(s =>
+   !ARTISTS.find(a => a.name.toLowerCase() === s.artist.toLowerCase())
+ );
+ 
+ mergedArtists.forEach((artist, i) => grid.appendChild(makeArtistCard(artist, i)));
+ 
+ if (otherSongs.length) {
+   const otherArtist = {
+     name: 'Other',
+     emoji: '🎵',
+     color: '#ffffff',
+     songs: otherSongs.map(s => ({ t: s.title, f: s.artist, y: '', _url: s.url }))
+   };
+   grid.appendChild(makeArtistCard(otherArtist, 'other'));
+ }
 }
-
+ 
 function makeArtistCard(artist, idx){
-  const card = document.createElement('div');
-  card.className='artist-card';
-  card.id='ac-'+idx;
-
-  const hdr = document.createElement('div');
-  hdr.className = 'artist-header';
-  hdr.innerHTML = '<span class="artist-emoji">'+artist.emoji+'</span><span class="artist-name">'+artist.name+'</span><span class="artist-count">'+artist.songs.length+' songs</span><span class="artist-toggle">▼</span>';
-  hdr.addEventListener('click', function(){ toggleArtist(idx); });
-
-  const list = document.createElement('div');
-  list.className = 'song-list';
-  list.id = 'sl-'+idx;
-
-  artist.songs.forEach(function(s){
-    var item = document.createElement('div');
-    item.className = 'song-item';
-    item.innerHTML = '<span class="play-icon">▶</span><span class="song-name">'+s.t+'</span>'+(s.f ? '<span class="song-feat">'+s.f+'</span>' : '');
-    (function(songTitle, artistName, ytId, directUrl){
-      item.addEventListener('click', function(){ 
-        if (directUrl) openPlayerURL(songTitle, artistName, directUrl);
-        else openPlayer(songTitle, artistName, ytId); 
-      });
-    })(s.t, artist.name, s.y || '', s._url || '');
-    list.appendChild(item);
-  });
-
-  card.appendChild(hdr);
-  card.appendChild(list);
-  return card;
+ const card = document.createElement('div');
+ card.className='artist-card';
+ card.id='ac-'+idx;
+ 
+ const hdr = document.createElement('div');
+ hdr.className = 'artist-header';
+ hdr.innerHTML = '<span class="artist-emoji">'+artist.emoji+'</span><span class="artist-name">'+artist.name+'</span><span class="artist-count">'+artist.songs.length+' songs</span><span class="artist-toggle">▼</span>';
+ hdr.addEventListener('click', function(){ toggleArtist(idx); });
+ 
+ const list = document.createElement('div');
+ list.className = 'song-list';
+ list.id = 'sl-'+idx;
+ 
+ artist.songs.forEach(function(s){
+   var item = document.createElement('div');
+   item.className = 'song-item';
+   item.innerHTML = '<span class="play-icon">▶</span><span class="song-name">'+s.t+'</span>'+(s.f ? '<span class="song-feat">'+s.f+'</span>' : '');
+   (function(songTitle, artistName, ytId, directUrl){
+     item.addEventListener('click', function(){
+       if (directUrl) openPlayerURL(songTitle, artistName, directUrl);
+       else openPlayer(songTitle, artistName, ytId);
+     });
+   })(s.t, artist.name, s.y || '', s._url || '');
+   list.appendChild(item);
+ });
+ 
+ card.appendChild(hdr);
+ card.appendChild(list);
+ return card;
 }
-
+ 
 function toggleArtist(i){const c=document.getElementById('ac-'+i);if(c)c.classList.toggle('open');}
-
+ 
 // ══════════════════════════════════════════
 //  VIDEOS
 // ══════════════════════════════════════════
 function renderVideos(){
-  const grid=document.getElementById('video-grid'); const vids=getVids();
-  if(!vids.length){grid.innerHTML='<p class="empty-msg">No videos yet — add some from Admin!</p>';return;}
-  grid.innerHTML=vids.map((v,i)=>`<div class="video-card">
-    <div class="video-thumb" onclick="toggleVid(${i})">${v.thumb?`<img src="${v.thumb}" alt="${v.title}" onerror="this.parentElement.innerHTML='🎬'">`:'🎬'}</div>
-    <div class="video-embed-wrap" id="ve-${i}"><iframe src="${eURL(v.url)}" allowfullscreen allow="autoplay;encrypted-media"></iframe></div>
-    <div class="video-info"><span class="video-title">${v.title}</span><button class="btn btn-primary btn-sm" onclick="toggleVid(${i})">▶ PLAY</button></div>
-  </div>`).join('');
+ const grid=document.getElementById('video-grid'); const vids=getVids();
+ if(!vids.length){grid.innerHTML='<p class="empty-msg">No videos yet — add some from Admin!</p>';return;}
+ grid.innerHTML=vids.map((v,i)=>`<div class="video-card">
+   <div class="video-thumb" onclick="toggleVid(${i})">${v.thumb?`<img src="${v.thumb}" alt="${v.title}" onerror="this.parentElement.innerHTML='🎬'">`:'🎬'}</div>
+   <div class="video-embed-wrap" id="ve-${i}"><iframe src="${eURL(v.url)}" allowfullscreen allow="autoplay;encrypted-media"></iframe></div>
+   <div class="video-info"><span class="video-title">${v.title}</span><button class="btn btn-primary btn-sm" onclick="toggleVid(${i})">▶ PLAY</button></div>
+ </div>`).join('');
 }
 function eURL(url){
-  if(!url)return'';
-  if(url.includes('youtube.com/watch')){try{const v=new URL(url).searchParams.get('v');return`https://www.youtube.com/embed/${v}?autoplay=1`;}catch{}}
-  if(url.includes('youtu.be/')){return`https://www.youtube.com/embed/${url.split('youtu.be/')[1].split('?')[0]}?autoplay=1`;}
-  return url;
+ if(!url)return'';
+ if(url.includes('youtube.com/watch')){try{const v=new URL(url).searchParams.get('v');return`https://www.youtube.com/embed/${v}?autoplay=1`;}catch{}}
+ if(url.includes('youtu.be/')){return`https://www.youtube.com/embed/${url.split('youtu.be/')[1].split('?')[0]}?autoplay=1`;}
+ return url;
 }
 function toggleVid(i){document.getElementById('ve-'+i).classList.toggle('open');}
-
+ 
 // ══════════════════════════════════════════
 //  GAMES
 // ══════════════════════════════════════════
 function renderGames(){
-  const grid=document.getElementById('games-grid'); const games=getGames();
-  if(!games.length){grid.innerHTML='<p class="empty-msg">No games yet.</p>';return;}
-  grid.innerHTML=games.map((g,i)=>`<div class="game-card">
-    <div class="game-thumb" onclick="openFS(${i})"><span>${g.emoji||'🎮'}</span></div>
-    <div class="game-info"><span class="game-title">${g.title}</span>
-      <div class="game-actions">
-        <button class="btn btn-green btn-sm" onclick="openFS(${i})">▶ PLAY</button>
-      </div>
-    </div>
-  </div>`).join('');
+ const grid=document.getElementById('games-grid'); const games=getGames();
+ if(!games.length){grid.innerHTML='<p class="empty-msg">No games yet.</p>';return;}
+ grid.innerHTML=games.map((g,i)=>`<div class="game-card">
+   <div class="game-thumb" onclick="openFS(${i})"><span>${g.emoji||'🎮'}</span></div>
+   <div class="game-info"><span class="game-title">${g.title}</span>
+     <div class="game-actions">
+       <button class="btn btn-green btn-sm" onclick="openFS(${i})">▶ PLAY</button>
+     </div>
+   </div>
+ </div>`).join('');
 }
 function toggleGame(i){
-  const w=document.getElementById('gf-'+i); const f=w.querySelector('iframe');
-  if(!w.classList.contains('open')){if(!f.src||f.src==='about:blank')f.src=f.dataset.src;w.classList.add('open');}
-  else w.classList.remove('open');
+ const w=document.getElementById('gf-'+i); const f=w.querySelector('iframe');
+ if(!w.classList.contains('open')){if(!f.src||f.src==='about:blank')f.src=f.dataset.src;w.classList.add('open');}
+ else w.classList.remove('open');
 }
 function openFS(i){const g=getGames()[i];document.getElementById('fs-title').textContent='⚡ '+g.title.toUpperCase();document.getElementById('fs-iframe').src=g.url;document.getElementById('game-fs').classList.add('open');}
 function closeFS(){document.getElementById('game-fs').classList.remove('open');document.getElementById('fs-iframe').src='';}
-
+ 
 // ══════════════════════════════════════════
 //  REQUESTS
 // ══════════════════════════════════════════
 function submitRequest(){
-  const name=document.getElementById('req-name').value.trim();
-  const type=document.getElementById('req-type').value;
-  const details=document.getElementById('req-details').value.trim();
-  if(!name||!details){showToast('⚠ Fill in all fields');return;}
-  const r=getReqs();r.push({name,type,details,time:new Date().toLocaleString()});saveReqs(r);
-  document.getElementById('req-name').value='';document.getElementById('req-details').value='';
-  showToast('⚡ Request sent!');
+ const name=document.getElementById('req-name').value.trim();
+ const type=document.getElementById('req-type').value;
+ const details=document.getElementById('req-details').value.trim();
+ if(!name||!details){showToast('⚠ Fill in all fields');return;}
+ const r=getReqs();r.push({name,type,details,time:new Date().toLocaleString()});saveReqs(r);
+ document.getElementById('req-name').value='';document.getElementById('req-details').value='';
+ showToast('⚡ Request sent!');
 }
-
+ 
 // ══════════════════════════════════════════
 //  ADMIN
 // ══════════════════════════════════════════
 let loggedIn=false, rf='all';
-
+ 
 function openAdmin(){
-  document.getElementById('admin-overlay').classList.add('open');
-  if(loggedIn){
-    document.getElementById('admin-login-wrap').style.display='none';
-    document.getElementById('admin-dash').style.display='block';
-    renderDash();
-  } else {
-    document.getElementById('admin-login-wrap').style.display='flex';
-    document.getElementById('admin-dash').style.display='none';
-  }
+ document.getElementById('admin-overlay').classList.add('open');
+ if(loggedIn){
+   document.getElementById('admin-login-wrap').style.display='none';
+   document.getElementById('admin-dash').style.display='block';
+   renderDash();
+ } else {
+   document.getElementById('admin-login-wrap').style.display='flex';
+   document.getElementById('admin-dash').style.display='none';
+ }
 }
 function closeAdmin(){document.getElementById('admin-overlay').classList.remove('open');}
 function doLogin(){
-  if(document.getElementById('admin-pw').value===ADMIN_PW){
-    loggedIn=true;
-    document.getElementById('admin-login-wrap').style.display='none';
-    document.getElementById('admin-dash').style.display='block';
-    renderDash();
-  } else {
-    document.getElementById('login-error').style.display='block';
-    document.getElementById('admin-pw').value='';
-  }
+ if(document.getElementById('admin-pw').value===ADMIN_PW){
+   loggedIn=true;
+   document.getElementById('admin-login-wrap').style.display='none';
+   document.getElementById('admin-dash').style.display='block';
+   renderDash();
+ } else {
+   document.getElementById('login-error').style.display='block';
+   document.getElementById('admin-pw').value='';
+ }
 }
 function doLogout(){
-  loggedIn=false;
-  document.getElementById('admin-login-wrap').style.display='flex';
-  document.getElementById('admin-dash').style.display='none';
-  document.getElementById('admin-pw').value='';
-  document.getElementById('login-error').style.display='none';
+ loggedIn=false;
+ document.getElementById('admin-login-wrap').style.display='flex';
+ document.getElementById('admin-dash').style.display='none';
+ document.getElementById('admin-pw').value='';
+ document.getElementById('login-error').style.display='none';
 }
 function renderDash(){renderStats();renderReqs();}
 function switchTab(t){
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  document.getElementById('tab-'+t).classList.add('active');
-  document.getElementById('panel-'+t).classList.add('active');
-  if(t==='manage')renderManage();
-  if(t==='banner')initBannerTab();
+ document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+ document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+ document.getElementById('tab-'+t).classList.add('active');
+ document.getElementById('panel-'+t).classList.add('active');
+ if(t==='manage')renderManage();
+ if(t==='banner')initBannerTab();
 }
 function switchRF(f){
-  rf=f;
-  document.querySelectorAll('.req-filter').forEach(b=>b.classList.remove('active'));
-  document.getElementById('rf-'+f).classList.add('active');
-  renderReqs();
+ rf=f;
+ document.querySelectorAll('.req-filter').forEach(b=>b.classList.remove('active'));
+ document.getElementById('rf-'+f).classList.add('active');
+ renderReqs();
 }
 function renderStats(){
-  const r=getReqs();
-  document.getElementById('stats-bar').innerHTML=`
-    <div class="stat-card"><div class="stat-num" style="color:var(--teal)">${r.length}</div><div class="stat-label">Total Requests</div></div>
-    <div class="stat-card"><div class="stat-num" style="color:var(--teal)">${r.filter(x=>x.type==='song').length}</div><div class="stat-label">Song Requests</div></div>
-    <div class="stat-card"><div class="stat-num" style="color:var(--pink)">${r.filter(x=>x.type==='video').length}</div><div class="stat-label">Video Requests</div></div>
-    <div class="stat-card"><div class="stat-num" style="color:var(--green)">${r.filter(x=>x.type==='game').length}</div><div class="stat-label">Game Requests</div></div>
-    <div class="stat-card"><div class="stat-num" style="color:var(--purple)">${getVids().length}</div><div class="stat-label">Videos</div></div>
-    <div class="stat-card"><div class="stat-num" style="color:var(--green)">${getGames().length}</div><div class="stat-label">Games</div></div>`;
+ const r=getReqs();
+ document.getElementById('stats-bar').innerHTML=`
+   <div class="stat-card"><div class="stat-num" style="color:var(--teal)">${r.length}</div><div class="stat-label">Total Requests</div></div>
+   <div class="stat-card"><div class="stat-num" style="color:var(--teal)">${r.filter(x=>x.type==='song').length}</div><div class="stat-label">Song Requests</div></div>
+   <div class="stat-card"><div class="stat-num" style="color:var(--pink)">${r.filter(x=>x.type==='video').length}</div><div class="stat-label">Video Requests</div></div>
+   <div class="stat-card"><div class="stat-num" style="color:var(--green)">${r.filter(x=>x.type==='game').length}</div><div class="stat-label">Game Requests</div></div>
+   <div class="stat-card"><div class="stat-num" style="color:var(--purple)">${getVids().length}</div><div class="stat-label">Videos</div></div>
+   <div class="stat-card"><div class="stat-num" style="color:var(--green)">${getGames().length}</div><div class="stat-label">Games</div></div>`;
 }
 function renderReqs(){
-  const all=getReqs(); const list=rf==='all'?all:all.filter(r=>r.type===rf);
-  const el=document.getElementById('req-list');
-  if(!list.length){el.innerHTML='<p class="empty-msg">No requests yet.</p>';return;}
-  el.innerHTML=list.map(r=>{
-    const ri=all.indexOf(r);
-    const bc=r.type==='song'?'bs':r.type==='video'?'bv':'bgame';
-    return `<div class="req-card"><div style="flex:1">
-      <div class="req-user">⚡ ${r.name} <span class="badge ${bc}">${r.type.toUpperCase()}</span></div>
-      <div class="req-text">${r.details}</div>
-      <div class="req-time">🕐 ${r.time}</div>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:.5rem;">
-      <button class="btn btn-green" style="font-size:.55rem;padding:.4rem .8rem;" onclick="approveReq(${ri})">✅ APPROVE</button>
-      <button class="btn btn-danger" onclick="delReq(${ri})">🗑 DELETE</button>
-    </div></div>`;
-  }).join('');
+ const all=getReqs(); const list=rf==='all'?all:all.filter(r=>r.type===rf);
+ const el=document.getElementById('req-list');
+ if(!list.length){el.innerHTML='<p class="empty-msg">No requests yet.</p>';return;}
+ el.innerHTML=list.map(r=>{
+   const ri=all.indexOf(r);
+   const bc=r.type==='song'?'bs':r.type==='video'?'bv':'bgame';
+   return `<div class="req-card"><div style="flex:1">
+     <div class="req-user">⚡ ${r.name} <span class="badge ${bc}">${r.type.toUpperCase()}</span></div>
+     <div class="req-text">${r.details}</div>
+     <div class="req-time">🕐 ${r.time}</div>
+   </div>
+   <div style="display:flex;flex-direction:column;gap:.5rem;">
+     <button class="btn btn-green" style="font-size:.55rem;padding:.4rem .8rem;" onclick="approveReq(${ri})">✅ APPROVE</button>
+     <button class="btn btn-danger" onclick="delReq(${ri})">🗑 DELETE</button>
+   </div></div>`;
+ }).join('');
 }
 function delReq(i){const r=getReqs();r.splice(i,1);saveReqs(r);renderDash();showToast('Deleted');}
-
+ 
 function approveReq(i){
-  const all = getReqs();
-  const r = all[i];
-  if (!r) return;
-
-  if (r.type === 'song') {
-    // Parse details to get artist and song name
-    // Expected format: "Artist - Song" or just details text
-    const details = r.details;
-    const dashIdx = details.indexOf(' - ');
-    let artist = '', song = '';
-    if (dashIdx > -1) {
-      artist = details.substring(0, dashIdx).trim();
-      song = details.substring(dashIdx + 3).trim();
-    } else {
-      artist = 'Other';
-      song = details;
-    }
-    const others = LS.get('bolt_other_songs', []);
-    others.push({ title: song, artist: artist, url: '' });
-    LS.set('bolt_other_songs', others);
-    showToast('✅ "' + song + '" added to music!');
-  } else if (r.type === 'video') {
-    const vids = getVids();
-    vids.push({ title: r.details, url: '', thumb: '' });
-    saveVids(vids);
-    showToast('✅ Video request approved!');
-  } else if (r.type === 'game') {
-    const games = getGames();
-    games.push({ title: r.details, url: '', emoji: '🎮' });
-    saveGames(games);
-    showToast('✅ Game request approved!');
-  }
-
-  // Delete request after approving
-  all.splice(i, 1);
-  saveReqs(all);
-  renderDash();
+ const all = getReqs();
+ const r = all[i];
+ if (!r) return;
+ 
+ if (r.type === 'song') {
+   // Parse details to get artist and song name
+   // Expected format: "Artist - Song" or just details text
+   const details = r.details;
+   const dashIdx = details.indexOf(' - ');
+   let artist = '', song = '';
+   if (dashIdx > -1) {
+     artist = details.substring(0, dashIdx).trim();
+     song = details.substring(dashIdx + 3).trim();
+   } else {
+     artist = 'Other';
+     song = details;
+   }
+   const others = LS.get('bolt_other_songs', []);
+   others.push({ title: song, artist: artist, url: '' });
+   LS.set('bolt_other_songs', others);
+   showToast('✅ "' + song + '" added to music!');
+ } else if (r.type === 'video') {
+   const vids = getVids();
+   vids.push({ title: r.details, url: '', thumb: '' });
+   saveVids(vids);
+   showToast('✅ Video request approved!');
+ } else if (r.type === 'game') {
+   const games = getGames();
+   games.push({ title: r.details, url: '', emoji: '🎮' });
+   saveGames(games);
+   showToast('✅ Game request approved!');
+ }
+ 
+ // Delete request after approving
+ all.splice(i, 1);
+ saveReqs(all);
+ renderDash();
 }
-
+ 
 function adminAddSong(){
-  const artist=document.getElementById('add-artist').value.trim();
-  const song=document.getElementById('add-song-name').value.trim();
-  const url=document.getElementById('add-song-url').value.trim();
-  if(!artist||!song||!url){showToast('⚠ Fill all fields');return;}
-  // Store as artist||song key so clicking it in music page loads the audio
-  const urls=getSongURLs();
-  urls[artist+'||'+song]=url;
-  saveSongURLs(urls);
-  document.getElementById('add-artist').value='';
-  document.getElementById('add-song-name').value='';
-  document.getElementById('add-song-url').value='';
-  renderStats();
-  showToast(`⚡ "${song}" by ${artist} linked!`);
+ const artist=document.getElementById('add-artist').value.trim();
+ const song=document.getElementById('add-song-name').value.trim();
+ const url=document.getElementById('add-song-url').value.trim();
+ if(!artist||!song||!url){showToast('⚠ Fill all fields');return;}
+ // Store as artist||song key so clicking it in music page loads the audio
+ const urls=getSongURLs();
+ urls[artist+'||'+song]=url;
+ saveSongURLs(urls);
+ document.getElementById('add-artist').value='';
+ document.getElementById('add-song-name').value='';
+ document.getElementById('add-song-url').value='';
+ renderStats();
+ showToast(`⚡ "${song}" by ${artist} linked!`);
 }
 function adminAddVideo(){
-  const title=document.getElementById('add-video-title').value.trim();
-  const url=document.getElementById('add-video-url').value.trim();
-  const thumb=document.getElementById('add-video-thumb').value.trim();
-  if(!title||!url){showToast('⚠ Title and URL required');return;}
-  const v=getVids();v.push({title,url,thumb});saveVids(v);
-  document.getElementById('add-video-title').value='';
-  document.getElementById('add-video-url').value='';
-  document.getElementById('add-video-thumb').value='';
-  renderStats();showToast(`⚡ "${title}" added!`);
+ const title=document.getElementById('add-video-title').value.trim();
+ const url=document.getElementById('add-video-url').value.trim();
+ const thumb=document.getElementById('add-video-thumb').value.trim();
+ if(!title||!url){showToast('⚠ Title and URL required');return;}
+ const v=getVids();v.push({title,url,thumb});saveVids(v);
+ document.getElementById('add-video-title').value='';
+ document.getElementById('add-video-url').value='';
+ document.getElementById('add-video-thumb').value='';
+ renderStats();showToast(`⚡ "${title}" added!`);
 }
 function adminAddGame(){
-  const title=document.getElementById('add-game-title').value.trim();
-  const url=document.getElementById('add-game-url').value.trim();
-  const emoji=document.getElementById('add-game-emoji').value.trim()||'🎮';
-  if(!title||!url){showToast('⚠ Title and URL required');return;}
-  const g=getGames();g.push({title,url,emoji});saveGames(g);
-  document.getElementById('add-game-title').value='';
-  document.getElementById('add-game-url').value='';
-  document.getElementById('add-game-emoji').value='';
-  renderStats();showToast(`⚡ "${title}" added!`);
+ const title=document.getElementById('add-game-title').value.trim();
+ const url=document.getElementById('add-game-url').value.trim();
+ const emoji=document.getElementById('add-game-emoji').value.trim()||'🎮';
+ if(!title||!url){showToast('⚠ Title and URL required');return;}
+ const g=getGames();g.push({title,url,emoji});saveGames(g);
+ document.getElementById('add-game-title').value='';
+ document.getElementById('add-game-url').value='';
+ document.getElementById('add-game-emoji').value='';
+ renderStats();showToast(`⚡ "${title}" added!`);
 }
 function renderManage(){
-  const vids=getVids();
-  document.getElementById('manage-videos').innerHTML=!vids.length?'<p class="empty-msg">No videos.</p>':
-    vids.map((v,i)=>`<div class="manage-item"><div class="manage-info"><div>${v.title}</div><div class="manage-sub">${v.url}</div></div><button class="btn btn-danger" onclick="delVid(${i})">🗑</button></div>`).join('');
-  const games=getGames();
-  document.getElementById('manage-games').innerHTML=!games.length?'<p class="empty-msg">No games.</p>':
-    games.map((g,i)=>`<div class="manage-item"><div class="manage-info"><div>${g.emoji} ${g.title}</div><div class="manage-sub">${g.url}</div></div><button class="btn btn-danger" onclick="delGame(${i})">🗑</button></div>`).join('');
-  const urls=getSongURLs(); const keys=Object.keys(urls);
-  document.getElementById('manage-songs').innerHTML=!keys.length?'<p class="empty-msg">No song links added yet.</p>':
-    keys.map((k,i)=>`<div class="manage-item"><div class="manage-info"><div>${k.replace('||',' — ')}</div><div class="manage-sub">${urls[k]}</div></div><button class="btn btn-danger" onclick="delSongURL('${k.replace(/'/g,"\\'")}')">🗑</button></div>`).join('');
+ const vids=getVids();
+ document.getElementById('manage-videos').innerHTML=!vids.length?'<p class="empty-msg">No videos.</p>':
+   vids.map((v,i)=>`<div class="manage-item"><div class="manage-info"><div>${v.title}</div><div class="manage-sub">${v.url}</div></div><button class="btn btn-danger" onclick="delVid(${i})">🗑</button></div>`).join('');
+ const games=getGames();
+ document.getElementById('manage-games').innerHTML=!games.length?'<p class="empty-msg">No games.</p>':
+   games.map((g,i)=>`<div class="manage-item"><div class="manage-info"><div>${g.emoji} ${g.title}</div><div class="manage-sub">${g.url}</div></div><button class="btn btn-danger" onclick="delGame(${i})">🗑</button></div>`).join('');
+ const urls=getSongURLs(); const keys=Object.keys(urls);
+ document.getElementById('manage-songs').innerHTML=!keys.length?'<p class="empty-msg">No song links added yet.</p>':
+   keys.map((k,i)=>`<div class="manage-item"><div class="manage-info"><div>${k.replace('||',' — ')}</div><div class="manage-sub">${urls[k]}</div></div><button class="btn btn-danger" onclick="delSongURL('${k.replace(/'/g,"\\'")}')">🗑</button></div>`).join('');
 }
 function delVid(i){const v=getVids();v.splice(i,1);saveVids(v);renderManage();renderStats();showToast('Deleted');}
 function delGame(i){const g=getGames();g.splice(i,1);saveGames(g);renderManage();renderStats();showToast('Deleted');}
 function delSongURL(k){const u=getSongURLs();delete u[k];saveSongURLs(u);renderManage();showToast('Deleted');}
-
+ 
 // ══════════════════════════════════════════
 //  TOAST
 // ══════════════════════════════════════════
-
+ 
 // BANNER
 let bannerBg = 'linear-gradient(135deg,#BF00FF,#FF10F0)';
 let bannerTxt = '#ffffff';
 let bannerShape = 'flat';
-
+ 
 const BANNER_SHAPES = {
-  flat:   {clip:'none'},
-  ribbon: {clip:'polygon(0% 0%, 2% 50%, 0% 100%, 100% 100%, 98% 50%, 100% 0%)'},
-  arrow:  {clip:'polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%, 3% 50%)'},
-  wave:   {clip:'polygon(0% 0%, 100% 0%, 100% 70%, 95% 100%, 85% 70%, 75% 100%, 65% 70%, 55% 100%, 45% 70%, 35% 100%, 25% 70%, 15% 100%, 5% 70%, 0% 100%)'},
-  notch:  {clip:'polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%)'}
+ flat:   {clip:'none'},
+ ribbon: {clip:'polygon(0% 0%, 2% 50%, 0% 100%, 100% 100%, 98% 50%, 100% 0%)'},
+ arrow:  {clip:'polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%, 3% 50%)'},
+ wave:   {clip:'polygon(0% 0%, 100% 0%, 100% 70%, 95% 100%, 85% 70%, 75% 100%, 65% 70%, 55% 100%, 45% 70%, 35% 100%, 25% 70%, 15% 100%, 5% 70%, 0% 100%)'},
+ notch:  {clip:'polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%)'}
 };
-
+ 
 function selectBannerBg(el){
-  document.querySelectorAll('.banner-bg-opt').forEach(e=>e.style.border='2px solid transparent');
-  el.style.border='2px solid #ffffff';
-  bannerBg = el.dataset.bg;
-  updateBannerPreview();
+ document.querySelectorAll('.banner-bg-opt').forEach(e=>e.style.border='2px solid transparent');
+ el.style.border='2px solid #ffffff';
+ bannerBg = el.dataset.bg;
+ updateBannerPreview();
 }
 function selectBannerTxt(el){
-  document.querySelectorAll('.banner-txt-opt').forEach(e=>e.style.outline='none');
-  el.style.outline='2px solid #00CED1';
-  bannerTxt = el.dataset.color;
-  updateBannerPreview();
+ document.querySelectorAll('.banner-txt-opt').forEach(e=>e.style.outline='none');
+ el.style.outline='2px solid #00CED1';
+ bannerTxt = el.dataset.color;
+ updateBannerPreview();
 }
 function selectBannerShape(el){
-  document.querySelectorAll('.banner-shape-opt').forEach(e=>{
-    e.style.border='2px solid rgba(255,255,255,.3)';
-    e.style.color='rgba(255,255,255,.5)';
-  });
-  el.style.border='2px solid #00CED1';
-  el.style.color='#00CED1';
-  bannerShape = el.dataset.shape;
-  updateBannerPreview();
+ document.querySelectorAll('.banner-shape-opt').forEach(e=>{
+   e.style.border='2px solid rgba(255,255,255,.3)';
+   e.style.color='rgba(255,255,255,.5)';
+ });
+ el.style.border='2px solid #00CED1';
+ el.style.color='#00CED1';
+ bannerShape = el.dataset.shape;
+ updateBannerPreview();
 }
 function applyShape(el, shape){
-  const s = BANNER_SHAPES[shape] || BANNER_SHAPES.flat;
-  el.style.clipPath = s.clip;
+ const s = BANNER_SHAPES[shape] || BANNER_SHAPES.flat;
+ el.style.clipPath = s.clip;
 }
 function updateBannerPreview(){
-  const msgEl = document.getElementById('banner-msg');
-  const msg = msgEl ? msgEl.value : '';
-  const p = document.getElementById('banner-preview');
-  if(p){
-    p.style.background = bannerBg;
-    p.style.color = bannerTxt;
-    p.textContent = msg || 'Your banner will look like this';
-    applyShape(p, bannerShape);
-  }
+ const msgEl = document.getElementById('banner-msg');
+ const msg = msgEl ? msgEl.value : '';
+ const p = document.getElementById('banner-preview');
+ if(p){
+   p.style.background = bannerBg;
+   p.style.color = bannerTxt;
+   p.textContent = msg || 'Your banner will look like this';
+   applyShape(p, bannerShape);
+ }
 }
 function publishBanner(){
-  const msg = document.getElementById('banner-msg').value.trim();
-  if(!msg){ showToast('⚠ Enter a message first'); return; }
-  const banner = { msg, bg: bannerBg, color: bannerTxt, shape: bannerShape };
-  LS.set('bolt_banner', banner);
-  showBanner(banner);
-  showToast('📢 Banner published!');
+ const msg = document.getElementById('banner-msg').value.trim();
+ if(!msg){ showToast('⚠ Enter a message first'); return; }
+ const banner = { msg, bg: bannerBg, color: bannerTxt, shape: bannerShape };
+ LS.set('bolt_banner', banner);
+ showBanner(banner);
+ showToast('📢 Banner published!');
 }
 function removeBanner(){
-  LS.set('bolt_banner', null);
-  document.getElementById('site-banner').classList.remove('visible');
-  showToast('Banner removed');
+ LS.set('bolt_banner', null);
+ document.getElementById('site-banner').classList.remove('visible');
+ showToast('Banner removed');
 }
 function closeBanner(){
-  document.getElementById('site-banner').classList.remove('visible');
+ document.getElementById('site-banner').classList.remove('visible');
 }
 function showBanner(b){
-  if(!b||!b.msg) return;
-  const el = document.getElementById('site-banner');
-  const txt = document.getElementById('banner-text');
-  el.style.background = b.bg;
-  el.style.color = b.color;
-  txt.textContent = b.msg;
-  applyShape(el, b.shape || 'flat');
-  el.classList.add('visible');
+ if(!b||!b.msg) return;
+ const el = document.getElementById('site-banner');
+ const txt = document.getElementById('banner-text');
+ el.style.background = b.bg;
+ el.style.color = b.color;
+ txt.textContent = b.msg;
+ applyShape(el, b.shape || 'flat');
+ el.classList.add('visible');
 }
 (function(){
-  const b = LS.get('bolt_banner', null);
-  if(b && b.msg) showBanner(b);
+ const b = LS.get('bolt_banner', null);
+ if(b && b.msg) showBanner(b);
 })();
-
+ 
 // Called when banner tab is opened
 function initBannerTab(){
-  const input = document.getElementById('banner-msg');
-  if(input && !input._hasListener){
-    input.addEventListener('input', updateBannerPreview);
-    input._hasListener = true;
-  }
-  updateBannerPreview();
+ const input = document.getElementById('banner-msg');
+ if(input && !input._hasListener){
+   input.addEventListener('input', updateBannerPreview);
+   input._hasListener = true;
+ }
+ updateBannerPreview();
 }
-
+ 
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);}
-
+ 
 // ══════════════════════════════════════════
 //  BACKGROUND CANVAS
 // ══════════════════════════════════════════
 (function(){
-  const canvas=document.getElementById('bg-canvas');
-  const ctx=canvas.getContext('2d');
-  let W,H;
-  const C=['#00CED1','#BF00FF','#FF10F0','#39FF14','#ffffff','#0066FF','#FF6600','#ffff00'];
-  const rand=(a,b)=>a+Math.random()*(b-a);
-  const rc=()=>C[Math.floor(Math.random()*C.length)];
-  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
-  resize();window.addEventListener('resize',resize);
-
-  // MORE lasers for non-home pages
-  const lasers=Array.from({length:26},()=>({
-    x:rand(0,W),y:rand(0,H),
-    vx:rand(-3,3)||.5,vy:rand(-3,3)||.5,
-    len:rand(120,280),color:rc(),alpha:rand(.5,.95),w:rand(1,3)
-  }));
-
-  const numLines = 7;
-
-  function isHomePage(){
-    return document.getElementById('page-home') && 
-           document.getElementById('page-home').classList.contains('active');
-  }
-
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    const t = Date.now() * 0.0006;
-
-    if(isHomePage()){
-      // HOME PAGE — wave lines on sides + fewer lasers
-
-      // LEFT SIDE waves
-      for(let i=0;i<numLines;i++){
-        const xBase = 8 + i * 10;
-        const phaseOffset = i * 0.5;
-        const color = i % 2 === 0 ? '#00CED1' : '#ffffff';
-        const alpha = 0.95 - (i / numLines) * 0.4;
-        ctx.beginPath();
-        for(let y=0;y<=H;y+=3){
-          const fold1 = Math.sin(y * 0.008 + t * 0.8 + phaseOffset) * 55;
-          const fold2 = Math.sin(y * 0.004 + t * 0.5 + phaseOffset) * 30;
-          const fold3 = Math.sin(y * 0.015 + t * 1.2 + phaseOffset) * 10;
-          const x = xBase + fold1 + fold2 + fold3;
-          y === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-        }
-        const lg = ctx.createLinearGradient(0,0,0,H);
-        lg.addColorStop(0,   color+'00');
-        lg.addColorStop(0.08,color+'99');
-        lg.addColorStop(0.5, color+'bb');
-        lg.addColorStop(0.92,color+'99');
-        lg.addColorStop(1,   color+'00');
-        ctx.strokeStyle = lg;
-        ctx.lineWidth = 5;
-        ctx.globalAlpha = alpha * 0.65;
-        ctx.stroke();
-        ctx.globalAlpha = 1;
-      }
-
-      // RIGHT SIDE waves
-      for(let i=0;i<numLines;i++){
-        const xBase = W - 8 - i * 10;
-        const phaseOffset = i * 0.5 + 2.0;
-        const color = i % 2 === 0 ? '#ffffff' : '#00CED1';
-        const alpha = 0.95 - (i / numLines) * 0.4;
-        ctx.beginPath();
-        for(let y=0;y<=H;y+=3){
-          const fold1 = Math.sin(y * 0.008 + t * 0.8 + phaseOffset) * 55;
-          const fold2 = Math.sin(y * 0.004 + t * 0.5 + phaseOffset) * 30;
-          const fold3 = Math.sin(y * 0.015 + t * 1.2 + phaseOffset) * 10;
-          const x = xBase - fold1 - fold2 - fold3;
-          y === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-        }
-        const lg = ctx.createLinearGradient(0,0,0,H);
-        lg.addColorStop(0,   color+'00');
-        lg.addColorStop(0.08,color+'99');
-        lg.addColorStop(0.5, color+'bb');
-        lg.addColorStop(0.92,color+'99');
-        lg.addColorStop(1,   color+'00');
-        ctx.strokeStyle = lg;
-        ctx.lineWidth = 5;
-        ctx.globalAlpha = alpha * 0.65;
-        ctx.stroke();
-        ctx.globalAlpha = 1;
-      }
-
-      // Fewer lasers on home page
-      lasers.slice(0,14).forEach(l=>{
-        l.x+=l.vx;l.y+=l.vy;
-        if(l.x<-300)l.x=W+300;if(l.x>W+300)l.x=-300;
-        if(l.y<-300)l.y=H+300;if(l.y>H+300)l.y=-300;
-        const angle=Math.atan2(l.vy,l.vx);
-        const ex=l.x+Math.cos(angle)*l.len,ey=l.y+Math.sin(angle)*l.len;
-        const grad=ctx.createLinearGradient(l.x,l.y,ex,ey);
-        grad.addColorStop(0,l.color+'00');grad.addColorStop(.35,l.color);
-        grad.addColorStop(.65,l.color);grad.addColorStop(1,l.color+'00');
-        ctx.beginPath();ctx.moveTo(l.x,l.y);ctx.lineTo(ex,ey);
-        ctx.strokeStyle=grad;ctx.lineWidth=l.w;ctx.globalAlpha=l.alpha*.7;ctx.stroke();
-        ctx.lineWidth=l.w*5;ctx.globalAlpha=l.alpha*.06;ctx.stroke();
-        ctx.globalAlpha=1;
-      });
-
-    } else {
-      // OTHER PAGES — more lasers only, no waves
-      lasers.forEach(l=>{
-        l.x+=l.vx;l.y+=l.vy;
-        if(l.x<-300)l.x=W+300;if(l.x>W+300)l.x=-300;
-        if(l.y<-300)l.y=H+300;if(l.y>H+300)l.y=-300;
-        const angle=Math.atan2(l.vy,l.vx);
-        const ex=l.x+Math.cos(angle)*l.len,ey=l.y+Math.sin(angle)*l.len;
-        const grad=ctx.createLinearGradient(l.x,l.y,ex,ey);
-        grad.addColorStop(0,l.color+'00');grad.addColorStop(.35,l.color);
-        grad.addColorStop(.65,l.color);grad.addColorStop(1,l.color+'00');
-        ctx.beginPath();ctx.moveTo(l.x,l.y);ctx.lineTo(ex,ey);
-        ctx.strokeStyle=grad;ctx.lineWidth=l.w;ctx.globalAlpha=l.alpha*.7;ctx.stroke();
-        ctx.lineWidth=l.w*5;ctx.globalAlpha=l.alpha*.06;ctx.stroke();
-        ctx.globalAlpha=1;
-      });
-    }
-
-    requestAnimationFrame(draw);
-  }
-  draw();
+ const canvas=document.getElementById('bg-canvas');
+ const ctx=canvas.getContext('2d');
+ let W,H;
+ const C=['#00CED1','#BF00FF','#FF10F0','#39FF14','#ffffff','#0066FF','#FF6600','#ffff00'];
+ const rand=(a,b)=>a+Math.random()*(b-a);
+ const rc=()=>C[Math.floor(Math.random()*C.length)];
+ function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+ resize();window.addEventListener('resize',resize);
+ 
+ // MORE lasers for non-home pages
+ const lasers=Array.from({length:26},()=>({
+   x:rand(0,W),y:rand(0,H),
+   vx:rand(-3,3)||.5,vy:rand(-3,3)||.5,
+   len:rand(120,280),color:rc(),alpha:rand(.5,.95),w:rand(1,3)
+ }));
+ 
+ const numLines = 7;
+ 
+ function isHomePage(){
+   return document.getElementById('page-home') &&
+          document.getElementById('page-home').classList.contains('active');
+ }
+ 
+ function draw(){
+   ctx.clearRect(0,0,W,H);
+   const t = Date.now() * 0.0006;
+ 
+   if(isHomePage()){
+     // HOME PAGE — wave lines on sides + fewer lasers
+ 
+     // LEFT SIDE waves
+     for(let i=0;i<numLines;i++){
+       const xBase = 8 + i * 10;
+       const phaseOffset = i * 0.5;
+       const color = i % 2 === 0 ? '#00CED1' : '#ffffff';
+       const alpha = 0.95 - (i / numLines) * 0.4;
+       ctx.beginPath();
+       for(let y=0;y<=H;y+=3){
+         const fold1 = Math.sin(y * 0.008 + t * 0.8 + phaseOffset) * 55;
+         const fold2 = Math.sin(y * 0.004 + t * 0.5 + phaseOffset) * 30;
+         const fold3 = Math.sin(y * 0.015 + t * 1.2 + phaseOffset) * 10;
+         const x = xBase + fold1 + fold2 + fold3;
+         y === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+       }
+       const lg = ctx.createLinearGradient(0,0,0,H);
+       lg.addColorStop(0,   color+'00');
+       lg.addColorStop(0.08,color+'99');
+       lg.addColorStop(0.5, color+'bb');
+       lg.addColorStop(0.92,color+'99');
+       lg.addColorStop(1,   color+'00');
+       ctx.strokeStyle = lg;
+       ctx.lineWidth = 5;
+       ctx.globalAlpha = alpha * 0.65;
+       ctx.stroke();
+       ctx.globalAlpha = 1;
+     }
+ 
+     // RIGHT SIDE waves
+     for(let i=0;i<numLines;i++){
+       const xBase = W - 8 - i * 10;
+       const phaseOffset = i * 0.5 + 2.0;
+       const color = i % 2 === 0 ? '#ffffff' : '#00CED1';
+       const alpha = 0.95 - (i / numLines) * 0.4;
+       ctx.beginPath();
+       for(let y=0;y<=H;y+=3){
+         const fold1 = Math.sin(y * 0.008 + t * 0.8 + phaseOffset) * 55;
+         const fold2 = Math.sin(y * 0.004 + t * 0.5 + phaseOffset) * 30;
+         const fold3 = Math.sin(y * 0.015 + t * 1.2 + phaseOffset) * 10;
+         const x = xBase - fold1 - fold2 - fold3;
+         y === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+       }
+       const lg = ctx.createLinearGradient(0,0,0,H);
+       lg.addColorStop(0,   color+'00');
+       lg.addColorStop(0.08,color+'99');
+       lg.addColorStop(0.5, color+'bb');
+       lg.addColorStop(0.92,color+'99');
+       lg.addColorStop(1,   color+'00');
+       ctx.strokeStyle = lg;
+       ctx.lineWidth = 5;
+       ctx.globalAlpha = alpha * 0.65;
+       ctx.stroke();
+       ctx.globalAlpha = 1;
+     }
+ 
+     // Fewer lasers on home page
+     lasers.slice(0,14).forEach(l=>{
+       l.x+=l.vx;l.y+=l.vy;
+       if(l.x<-300)l.x=W+300;if(l.x>W+300)l.x=-300;
+       if(l.y<-300)l.y=H+300;if(l.y>H+300)l.y=-300;
+       const angle=Math.atan2(l.vy,l.vx);
+       const ex=l.x+Math.cos(angle)*l.len,ey=l.y+Math.sin(angle)*l.len;
+       const grad=ctx.createLinearGradient(l.x,l.y,ex,ey);
+       grad.addColorStop(0,l.color+'00');grad.addColorStop(.35,l.color);
+       grad.addColorStop(.65,l.color);grad.addColorStop(1,l.color+'00');
+       ctx.beginPath();ctx.moveTo(l.x,l.y);ctx.lineTo(ex,ey);
+       ctx.strokeStyle=grad;ctx.lineWidth=l.w;ctx.globalAlpha=l.alpha*.7;ctx.stroke();
+       ctx.lineWidth=l.w*5;ctx.globalAlpha=l.alpha*.06;ctx.stroke();
+       ctx.globalAlpha=1;
+     });
+ 
+   } else {
+     // OTHER PAGES — more lasers only, no waves
+     lasers.forEach(l=>{
+       l.x+=l.vx;l.y+=l.vy;
+       if(l.x<-300)l.x=W+300;if(l.x>W+300)l.x=-300;
+       if(l.y<-300)l.y=H+300;if(l.y>H+300)l.y=-300;
+       const angle=Math.atan2(l.vy,l.vx);
+       const ex=l.x+Math.cos(angle)*l.len,ey=l.y+Math.sin(angle)*l.len;
+       const grad=ctx.createLinearGradient(l.x,l.y,ex,ey);
+       grad.addColorStop(0,l.color+'00');grad.addColorStop(.35,l.color);
+       grad.addColorStop(.65,l.color);grad.addColorStop(1,l.color+'00');
+       ctx.beginPath();ctx.moveTo(l.x,l.y);ctx.lineTo(ex,ey);
+       ctx.strokeStyle=grad;ctx.lineWidth=l.w;ctx.globalAlpha=l.alpha*.7;ctx.stroke();
+       ctx.lineWidth=l.w*5;ctx.globalAlpha=l.alpha*.06;ctx.stroke();
+       ctx.globalAlpha=1;
+     });
+   }
+ 
+   requestAnimationFrame(draw);
+ }
+ draw();
 })();
-
+ 
 showPage('home');
 </script>
 </body>
 </html>
+ 
+
